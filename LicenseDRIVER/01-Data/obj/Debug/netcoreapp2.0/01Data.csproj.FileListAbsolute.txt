@@ -1,0 +1,4 @@
+C:\Users\emmas\source\repos\LicenseDRIVER\01-Data\obj\Debug\netcoreapp2.0\01Data.csprojResolveAssemblyReference.cache
+C:\Users\emmas\source\repos\LicenseDRIVER\01-Data\obj\Debug\netcoreapp2.0\01Data.csproj.CoreCompileInputs.cache
+C:\Users\emmas\source\repos\LicenseDRIVER\01-Data\obj\Debug\netcoreapp2.0\01Data.AssemblyInfoInputs.cache
+C:\Users\emmas\source\repos\LicenseDRIVER\01-Data\obj\Debug\netcoreapp2.0\01Data.AssemblyInfo.cs

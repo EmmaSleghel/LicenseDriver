@@ -1,0 +1,9 @@
+C:\Users\emmas\source\repos\LicenseDRIVER\03-Services\bin\Debug\netcoreapp2.0\03-Services.deps.json
+C:\Users\emmas\source\repos\LicenseDRIVER\03-Services\bin\Debug\netcoreapp2.0\03-Services.dll
+C:\Users\emmas\source\repos\LicenseDRIVER\03-Services\bin\Debug\netcoreapp2.0\03-Services.pdb
+C:\Users\emmas\source\repos\LicenseDRIVER\03-Services\obj\Debug\netcoreapp2.0\03-Services.csprojResolveAssemblyReference.cache
+C:\Users\emmas\source\repos\LicenseDRIVER\03-Services\obj\Debug\netcoreapp2.0\03-Services.csproj.CoreCompileInputs.cache
+C:\Users\emmas\source\repos\LicenseDRIVER\03-Services\obj\Debug\netcoreapp2.0\03-Services.AssemblyInfoInputs.cache
+C:\Users\emmas\source\repos\LicenseDRIVER\03-Services\obj\Debug\netcoreapp2.0\03-Services.AssemblyInfo.cs
+C:\Users\emmas\source\repos\LicenseDRIVER\03-Services\obj\Debug\netcoreapp2.0\03-Services.dll
+C:\Users\emmas\source\repos\LicenseDRIVER\03-Services\obj\Debug\netcoreapp2.0\03-Services.pdb

@@ -1,0 +1,9 @@
+C:\Users\emmas\source\repos\LicenseDRIVER\02-Business\bin\Debug\netcoreapp2.0\02-Business.deps.json
+C:\Users\emmas\source\repos\LicenseDRIVER\02-Business\bin\Debug\netcoreapp2.0\02-Business.dll
+C:\Users\emmas\source\repos\LicenseDRIVER\02-Business\bin\Debug\netcoreapp2.0\02-Business.pdb
+C:\Users\emmas\source\repos\LicenseDRIVER\02-Business\obj\Debug\netcoreapp2.0\02-Business.csprojResolveAssemblyReference.cache
+C:\Users\emmas\source\repos\LicenseDRIVER\02-Business\obj\Debug\netcoreapp2.0\02-Business.csproj.CoreCompileInputs.cache
+C:\Users\emmas\source\repos\LicenseDRIVER\02-Business\obj\Debug\netcoreapp2.0\02-Business.AssemblyInfoInputs.cache
+C:\Users\emmas\source\repos\LicenseDRIVER\02-Business\obj\Debug\netcoreapp2.0\02-Business.AssemblyInfo.cs
+C:\Users\emmas\source\repos\LicenseDRIVER\02-Business\obj\Debug\netcoreapp2.0\02-Business.dll
+C:\Users\emmas\source\repos\LicenseDRIVER\02-Business\obj\Debug\netcoreapp2.0\02-Business.pdb
