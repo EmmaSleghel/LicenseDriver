@@ -9,3 +9,14 @@ C:\Users\emmas\source\repos\LicenseDRIVER\LicenseDRIVER\obj\Debug\netcoreapp2.0\
 C:\Users\emmas\source\repos\LicenseDRIVER\LicenseDRIVER\obj\Debug\netcoreapp2.0\LicenseDRIVER.AssemblyInfo.cs
 C:\Users\emmas\source\repos\LicenseDRIVER\LicenseDRIVER\obj\Debug\netcoreapp2.0\LicenseDRIVER.dll
 C:\Users\emmas\source\repos\LicenseDRIVER\LicenseDRIVER\obj\Debug\netcoreapp2.0\LicenseDRIVER.pdb
+C:\Bit\LicenseDriver\LicenseDRIVER\LicenseDRIVER\bin\Debug\netcoreapp2.0\LicenseDRIVER.deps.json
+C:\Bit\LicenseDriver\LicenseDRIVER\LicenseDRIVER\bin\Debug\netcoreapp2.0\LicenseDRIVER.runtimeconfig.json
+C:\Bit\LicenseDriver\LicenseDRIVER\LicenseDRIVER\bin\Debug\netcoreapp2.0\LicenseDRIVER.runtimeconfig.dev.json
+C:\Bit\LicenseDriver\LicenseDRIVER\LicenseDRIVER\bin\Debug\netcoreapp2.0\LicenseDRIVER.dll
+C:\Bit\LicenseDriver\LicenseDRIVER\LicenseDRIVER\bin\Debug\netcoreapp2.0\LicenseDRIVER.pdb
+C:\Bit\LicenseDriver\LicenseDRIVER\LicenseDRIVER\obj\Debug\netcoreapp2.0\LicenseDRIVER.csprojResolveAssemblyReference.cache
+C:\Bit\LicenseDriver\LicenseDRIVER\LicenseDRIVER\obj\Debug\netcoreapp2.0\LicenseDRIVER.csproj.CoreCompileInputs.cache
+C:\Bit\LicenseDriver\LicenseDRIVER\LicenseDRIVER\obj\Debug\netcoreapp2.0\LicenseDRIVER.AssemblyInfoInputs.cache
+C:\Bit\LicenseDriver\LicenseDRIVER\LicenseDRIVER\obj\Debug\netcoreapp2.0\LicenseDRIVER.AssemblyInfo.cs
+C:\Bit\LicenseDriver\LicenseDRIVER\LicenseDRIVER\obj\Debug\netcoreapp2.0\LicenseDRIVER.dll
+C:\Bit\LicenseDriver\LicenseDRIVER\LicenseDRIVER\obj\Debug\netcoreapp2.0\LicenseDRIVER.pdb

@@ -10974,7 +10974,7 @@
       ]
     },
     "System.Runtime.Serialization.Primitives/4.3.0": {
-      "sha512": "Wz+0KOukJGAlXjtKr+5Xpuxf8+c8739RI1C+A2BoQZT+wMCCoMDDdO8/4IRHfaVINqL78GO8dW8G2lW/e45Mcw==",
+      "sha512": "43et91koH5AXYVx5SRo9dj+DZo71yU8Y7ZuZRp79cdFzAxRSB/OamWnrtoORPA2h4zNBcZOyF9x3KIp3gax0mA==",
       "type": "package",
       "path": "system.runtime.serialization.primitives/4.3.0",
       "files": [
@@ -12530,11 +12530,12 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
       "Microsoft.AspNetCore.All >= 2.0.3",
+      "Microsoft.EntityFrameworkCore >= 2.0.1",
       "Microsoft.NETCore.App >= 2.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\emmas\\.nuget\\packages\\": {},
+    "C:\\Users\\Emma\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -12543,17 +12544,17 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\emmas\\source\\repos\\LicenseDRIVER\\LicenseDRIVER\\LicenseDRIVER.csproj",
+      "projectUniqueName": "C:\\Bit\\LicenseDriver\\LicenseDRIVER\\LicenseDRIVER\\LicenseDRIVER.csproj",
       "projectName": "LicenseDRIVER",
-      "projectPath": "C:\\Users\\emmas\\source\\repos\\LicenseDRIVER\\LicenseDRIVER\\LicenseDRIVER.csproj",
-      "packagesPath": "C:\\Users\\emmas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\emmas\\source\\repos\\LicenseDRIVER\\LicenseDRIVER\\obj\\",
+      "projectPath": "C:\\Bit\\LicenseDriver\\LicenseDRIVER\\LicenseDRIVER\\LicenseDRIVER.csproj",
+      "packagesPath": "C:\\Users\\Emma\\.nuget\\packages\\",
+      "outputPath": "C:\\Bit\\LicenseDriver\\LicenseDRIVER\\LicenseDRIVER\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\emmas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Emma\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -12577,9 +12578,13 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
+          "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "2.0.1"
+          },
           "Microsoft.NETCore.App": {
             "target": "Package",
-            "version": "2.0",
+            "version": "2.0.0",
             "autoReferenced": true
           },
           "Microsoft.AspNetCore.All": {

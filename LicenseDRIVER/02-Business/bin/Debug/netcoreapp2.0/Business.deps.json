@@ -9,7 +9,6 @@
       "Business/1.0.0": {
         "dependencies": {
           "Data": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "2.0.1.0",
           "Microsoft.IdentityModel.Protocols": "2.1.4.0"
         },
         "runtime": {
@@ -19,11 +18,6 @@
       "Data/1.0.0": {
         "runtime": {
           "Data.dll": {}
-        }
-      },
-      "Microsoft.EntityFrameworkCore/2.0.1.0": {
-        "runtime": {
-          "Microsoft.EntityFrameworkCore.dll": {}
         }
       },
       "Microsoft.IdentityModel.Protocols/2.1.4.0": {
@@ -41,11 +35,6 @@
     },
     "Data/1.0.0": {
       "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Microsoft.EntityFrameworkCore/2.0.1.0": {
-      "type": "reference",
       "serviceable": false,
       "sha512": ""
     },

@@ -11,7 +11,7 @@ namespace Data.Persistence
 
         public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options)
         {
-          
+         
         }
 
        // public virtual DbSet<> 
