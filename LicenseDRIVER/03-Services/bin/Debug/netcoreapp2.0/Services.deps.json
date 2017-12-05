@@ -1,14 +1,16 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "6c96ba9a9f9fe10a9883318fac36c3b810dab0b4"
+    "signature": "1a8fad09d26727867271f1bf42c39ba863e586fb"
   },
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.0": {
       "Services/1.0.0": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": "2.0.1"
+          "Business": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "2.0.1",
+          "SimpleInjector": "4.0.12"
         },
         "runtime": {
           "Services.dll": {}
@@ -111,6 +113,14 @@
           "lib/netstandard1.0/Remotion.Linq.dll": {}
         }
       },
+      "SimpleInjector/4.0.12": {
+        "dependencies": {
+          "System.ComponentModel": "4.0.1"
+        },
+        "runtime": {
+          "lib/netstandard1.3/SimpleInjector.dll": {}
+        }
+      },
       "System.Collections/4.0.11": {
         "dependencies": {
           "Microsoft.NETCore.Targets": "1.0.1",
@@ -118,6 +128,11 @@
         }
       },
       "System.Collections.Immutable/1.4.0": {},
+      "System.ComponentModel/4.0.1": {
+        "dependencies": {
+          "System.Runtime": "4.1.0"
+        }
+      },
       "System.ComponentModel.Annotations/4.4.0": {},
       "System.Diagnostics.Debug/4.0.11": {
         "dependencies": {
@@ -288,6 +303,23 @@
           "Microsoft.NETCore.Targets": "1.0.1",
           "System.Runtime": "4.1.0"
         }
+      },
+      "Business/1.0.0": {
+        "dependencies": {
+          "Data": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "2.0.1"
+        },
+        "runtime": {
+          "Business.dll": {}
+        }
+      },
+      "Data/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "2.0.1"
+        },
+        "runtime": {
+          "Data.dll": {}
+        }
       }
     }
   },
@@ -374,6 +406,13 @@
       "path": "remotion.linq/2.1.1",
       "hashPath": "remotion.linq.2.1.1.nupkg.sha512"
     },
+    "SimpleInjector/4.0.12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-10Qj1UiitErW7ktN13sYxg9vrbHClJ7ThXj6n/27bKAO4V+bIcRRSJDGbMYz54x290Q/ELFJOu9Q/3KicqivTg==",
+      "path": "simpleinjector/4.0.12",
+      "hashPath": "simpleinjector.4.0.12.nupkg.sha512"
+    },
     "System.Collections/4.0.11": {
       "type": "package",
       "serviceable": true,
@@ -387,6 +426,13 @@
       "sha512": "sha512-71hw5RUJRu5+q/geUY69gpXD8Upd12cH+F3MwpXV2zle7Bqqkrmc1JblOTuvUcgmdnUtQvBlV5e1d6RH+H2lvA==",
       "path": "system.collections.immutable/1.4.0",
       "hashPath": "system.collections.immutable.1.4.0.nupkg.sha512"
+    },
+    "System.ComponentModel/4.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-oBZFnm7seFiVfugsIyOvQCWobNZs7FzqDV/B7tx20Ep/l3UUFCPDkdTnCNaJZTU27zjeODmy2C/cP60u3D4c9w==",
+      "path": "system.componentmodel/4.0.1",
+      "hashPath": "system.componentmodel.4.0.1.nupkg.sha512"
     },
     "System.ComponentModel.Annotations/4.4.0": {
       "type": "package",
@@ -555,6 +601,16 @@
       "sha512": "sha512-k1S4Gc6IGwtHGT8188RSeGaX86Qw/wnrgNLshJvsdNUOPP9etMmo8S07c+UlOAx4K/xLuN9ivA1bD0LVurtIxQ==",
       "path": "system.threading.tasks/4.0.11",
       "hashPath": "system.threading.tasks.4.0.11.nupkg.sha512"
+    },
+    "Business/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

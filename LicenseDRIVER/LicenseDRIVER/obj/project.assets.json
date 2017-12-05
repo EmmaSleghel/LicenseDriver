@@ -2976,6 +2976,19 @@
           }
         }
       },
+      "SimpleInjector/4.0.12": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0",
+          "System.ComponentModel": "4.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/SimpleInjector.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/SimpleInjector.dll": {}
+        }
+      },
       "SQLitePCLRaw.bundle_green/1.1.7": {
         "type": "package",
         "dependencies": {
@@ -4745,6 +4758,48 @@
         },
         "runtime": {
           "lib/netstandard1.3/Microsoft.WindowsAzure.Storage.dll": {}
+        }
+      },
+      "Business/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "Data": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "2.0.1"
+        },
+        "compile": {
+          "bin/placeholder/Business.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Business.dll": {}
+        }
+      },
+      "Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "2.0.1"
+        },
+        "compile": {
+          "bin/placeholder/Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Data.dll": {}
+        }
+      },
+      "Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "Business": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "2.0.1",
+          "SimpleInjector": "4.0.12"
+        },
+        "compile": {
+          "bin/placeholder/Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Services.dll": {}
         }
       }
     }
@@ -7834,6 +7889,23 @@
         "runtimes/win-x86/native/sni.dll",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "SimpleInjector/4.0.12": {
+      "sha512": "10Qj1UiitErW7ktN13sYxg9vrbHClJ7ThXj6n/27bKAO4V+bIcRRSJDGbMYz54x290Q/ELFJOu9Q/3KicqivTg==",
+      "type": "package",
+      "path": "simpleinjector/4.0.12",
+      "files": [
+        "lib/net40/SimpleInjector.dll",
+        "lib/net40/SimpleInjector.xml",
+        "lib/net45/SimpleInjector.dll",
+        "lib/net45/SimpleInjector.xml",
+        "lib/netstandard1.0/SimpleInjector.dll",
+        "lib/netstandard1.0/SimpleInjector.xml",
+        "lib/netstandard1.3/SimpleInjector.dll",
+        "lib/netstandard1.3/SimpleInjector.xml",
+        "simpleinjector.4.0.12.nupkg.sha512",
+        "simpleinjector.nuspec"
       ]
     },
     "SQLitePCLRaw.bundle_green/1.1.7": {
@@ -10974,7 +11046,7 @@
       ]
     },
     "System.Runtime.Serialization.Primitives/4.3.0": {
-      "sha512": "43et91koH5AXYVx5SRo9dj+DZo71yU8Y7ZuZRp79cdFzAxRSB/OamWnrtoORPA2h4zNBcZOyF9x3KIp3gax0mA==",
+      "sha512": "Wz+0KOukJGAlXjtKr+5Xpuxf8+c8739RI1C+A2BoQZT+wMCCoMDDdO8/4IRHfaVINqL78GO8dW8G2lW/e45Mcw==",
       "type": "package",
       "path": "system.runtime.serialization.primitives/4.3.0",
       "files": [
@@ -12525,17 +12597,34 @@
         "windowsazure.storage.8.1.4.nupkg.sha512",
         "windowsazure.storage.nuspec"
       ]
+    },
+    "Business/1.0.0": {
+      "type": "project",
+      "path": "../02-Business/Business.csproj",
+      "msbuildProject": "../02-Business/Business.csproj"
+    },
+    "Data/1.0.0": {
+      "type": "project",
+      "path": "../01-Data/Data.csproj",
+      "msbuildProject": "../01-Data/Data.csproj"
+    },
+    "Services/1.0.0": {
+      "type": "project",
+      "path": "../03-Services/Services.csproj",
+      "msbuildProject": "../03-Services/Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
+      "Business >= 1.0.0",
       "Microsoft.AspNetCore.All >= 2.0.3",
       "Microsoft.EntityFrameworkCore >= 2.0.1",
-      "Microsoft.NETCore.App >= 2.0.0"
+      "Microsoft.NETCore.App >= 2.0.0",
+      "Services >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Emma\\.nuget\\packages\\": {},
+    "C:\\Users\\emmas\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -12544,17 +12633,17 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Bit\\LicenseDriver\\LicenseDRIVER\\LicenseDRIVER\\LicenseDRIVER.csproj",
+      "projectUniqueName": "C:\\Users\\emmas\\Documents\\LicenseDriver\\LicenseDRIVER\\LicenseDRIVER\\LicenseDRIVER.csproj",
       "projectName": "LicenseDRIVER",
-      "projectPath": "C:\\Bit\\LicenseDriver\\LicenseDRIVER\\LicenseDRIVER\\LicenseDRIVER.csproj",
-      "packagesPath": "C:\\Users\\Emma\\.nuget\\packages\\",
-      "outputPath": "C:\\Bit\\LicenseDriver\\LicenseDRIVER\\LicenseDRIVER\\obj\\",
+      "projectPath": "C:\\Users\\emmas\\Documents\\LicenseDriver\\LicenseDRIVER\\LicenseDRIVER\\LicenseDRIVER.csproj",
+      "packagesPath": "C:\\Users\\emmas\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\emmas\\Documents\\LicenseDriver\\LicenseDRIVER\\LicenseDRIVER\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Emma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\emmas\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -12566,7 +12655,14 @@
       },
       "frameworks": {
         "netcoreapp2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\emmas\\Documents\\LicenseDriver\\LicenseDRIVER\\03-Services\\Services.csproj": {
+              "projectPath": "C:\\Users\\emmas\\Documents\\LicenseDriver\\LicenseDRIVER\\03-Services\\Services.csproj"
+            },
+            "C:\\Users\\emmas\\Documents\\LicenseDriver\\LicenseDRIVER\\02-Business\\Business.csproj": {
+              "projectPath": "C:\\Users\\emmas\\Documents\\LicenseDriver\\LicenseDRIVER\\02-Business\\Business.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -12584,7 +12680,7 @@
           },
           "Microsoft.NETCore.App": {
             "target": "Package",
-            "version": "2.0.0",
+            "version": "2.0",
             "autoReferenced": true
           },
           "Microsoft.AspNetCore.All": {

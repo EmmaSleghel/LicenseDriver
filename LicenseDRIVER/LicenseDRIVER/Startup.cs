@@ -1,11 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Business.Infrastructure;
+using Business.Repository;
+using Data.Persistence;
+using Microsoft.EntityFrameworkCore;
+using Services.Student;
+using Services.Teacher;
 
 namespace LicenseDRIVER
 {
@@ -21,7 +23,15 @@ namespace LicenseDRIVER
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<IDatabaseFactory, DatabaseFactory>();
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
+            services.AddTransient<IStudentService, StudentService>();
+            services.AddTransient<ITeacherService, TeacherService>();
+
+            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddMvc();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿
 using Microsoft.EntityFrameworkCore;
-
+using Data.Entities;
 
 namespace Data.Persistence
 {
@@ -14,12 +12,14 @@ namespace Data.Persistence
          
         }
 
-       // public virtual DbSet<> 
-       
+       public virtual DbSet<Student> Students { get; set; }
+        public virtual DbSet<Teacher> Teachers { get; set; }
+
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+           
 
-        
         }
     }
 }

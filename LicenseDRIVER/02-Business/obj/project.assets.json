@@ -2777,7 +2777,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Emma\\.nuget\\packages\\": {},
+    "C:\\Users\\emmas\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -2786,17 +2786,17 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Bit\\LicenseDriver\\LicenseDRIVER\\02-Business\\Business.csproj",
+      "projectUniqueName": "C:\\Users\\emmas\\Documents\\LicenseDriver\\LicenseDRIVER\\02-Business\\Business.csproj",
       "projectName": "Business",
-      "projectPath": "C:\\Bit\\LicenseDriver\\LicenseDRIVER\\02-Business\\Business.csproj",
-      "packagesPath": "C:\\Users\\Emma\\.nuget\\packages\\",
-      "outputPath": "C:\\Bit\\LicenseDriver\\LicenseDRIVER\\02-Business\\obj\\",
+      "projectPath": "C:\\Users\\emmas\\Documents\\LicenseDriver\\LicenseDRIVER\\02-Business\\Business.csproj",
+      "packagesPath": "C:\\Users\\emmas\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\emmas\\Documents\\LicenseDriver\\LicenseDRIVER\\02-Business\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Emma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\emmas\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2809,8 +2809,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\Bit\\LicenseDriver\\LicenseDRIVER\\01-Data\\Data.csproj": {
-              "projectPath": "C:\\Bit\\LicenseDriver\\LicenseDRIVER\\01-Data\\Data.csproj"
+            "C:\\Users\\emmas\\Documents\\LicenseDriver\\LicenseDRIVER\\01-Data\\Data.csproj": {
+              "projectPath": "C:\\Users\\emmas\\Documents\\LicenseDriver\\LicenseDRIVER\\01-Data\\Data.csproj"
             }
           }
         }
@@ -2831,7 +2831,7 @@
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "2.0.0",
+            "version": "2.0",
             "autoReferenced": true
           }
         },
