@@ -16,6 +16,7 @@ namespace Data.Persistence
         public virtual DbSet<Teacher> Teachers { get; set; }
 
 
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
            

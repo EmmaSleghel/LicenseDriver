@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Data.Entities
+namespace Services.Dtos
 {
-    public class Student
+    public class StudentDto
     {
-        public Guid StudentId { get; set; }
+        public Guid Id { get; set; }
         public string Name { get; set; }
         public string Class { get; set; }
     }

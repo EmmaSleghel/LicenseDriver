@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace LicenseDRIVER.Models
+namespace Data.Entities
 {
     public class User:IdentityUser
     {

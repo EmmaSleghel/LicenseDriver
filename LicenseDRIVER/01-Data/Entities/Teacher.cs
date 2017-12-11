@@ -4,7 +4,10 @@ using System.Text;
 
 namespace Data.Entities
 {
-    public class Teacher
+    public class Teacher 
     {
+        public Guid TeacherId { get; set; }
+        public String Name { get; set; }
+        public List<Student> Students { get; set; }
     }
 }

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
 using LicenseDRIVER.Models;
+using Data.Entities;
 
 namespace LicenseDRIVER.Controllers
 {

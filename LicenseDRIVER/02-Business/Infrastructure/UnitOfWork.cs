@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Data.Persistence;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
 using System;
 using System.Collections.Generic;
@@ -8,16 +9,16 @@ namespace Business.Infrastructure
 {
     public class UnitOfWork: IUnitOfWork
     {
-        private readonly IDatabaseFactory databaseFactory;
+        private readonly DatabaseContext databaseContext;
 
-        public UnitOfWork(IDatabaseFactory databaseFactory)
+        public UnitOfWork(DatabaseContext databaseContext)
         {
-            this.databaseFactory = databaseFactory;
+            this.databaseContext = databaseContext;
         }
 
         public void Commit()
         {
-            databaseFactory.Get().SaveChanges();
+            databaseContext.SaveChanges();
         }
     }
 }

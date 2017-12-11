@@ -1,4 +1,5 @@
 ﻿using Business.Infrastructure;
+using Data.Persistence;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -10,13 +11,13 @@ namespace Business.Repository
 {
     public class Repository<TEntity> : IRepository<TEntity> where TEntity:class 
     {
-        private readonly DbContext dataContext;
+        private readonly DatabaseContext dataContext;
         private readonly DbSet<TEntity> dbset;
 
 
-        public Repository(IDatabaseFactory databaseFactory)
+        public Repository(DatabaseContext dbContext)
         {
-            dataContext = databaseFactory.Get();
+            dataContext = dbContext;
             dbset = dataContext.Set<TEntity>();
         }
 

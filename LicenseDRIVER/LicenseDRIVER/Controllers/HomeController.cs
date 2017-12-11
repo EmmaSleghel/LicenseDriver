@@ -5,13 +5,20 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using LicenseDRIVER.Models;
+using Services.Student;
 
 namespace LicenseDRIVER.Controllers
 {
     public class HomeController : Controller
     {
+        private IStudentService studentService { get; set; }
+        public HomeController(IStudentService studentService)
+        {
+            this.studentService = studentService;
+        }
         public IActionResult Index()
         {
+            var stud = studentService.GetStudentById(new Guid());
             return View();
         }
 

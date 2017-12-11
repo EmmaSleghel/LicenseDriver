@@ -10,6 +10,8 @@ using Services.Student;
 using Services.Teacher;
 using LicenseDRIVER.Models;
 using Microsoft.AspNetCore.Identity;
+using AutoMapper;
+using Data.Entities;
 
 namespace LicenseDRIVER
 {
@@ -25,15 +27,14 @@ namespace LicenseDRIVER
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddTransient<IDatabaseFactory, DatabaseFactory>();
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddTransient<IStudentService, StudentService>();
             services.AddTransient<ITeacherService, TeacherService>();
 
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
-            services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),x=>x.MigrationsAssembly("LicenseDRIVER")));
             services.AddMvc();
-
+            services.AddAutoMapper();
             services.AddIdentity<User, IdentityRole>()
                .AddEntityFrameworkStores<DatabaseContext>();
         }
