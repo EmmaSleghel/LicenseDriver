@@ -37,6 +37,20 @@
             </div>
         </div>
     </nav>
+    <div>
+        @if (User.Identity.IsAuthenticated)
+        {
+            <div>@User.Identity.Name</div>
+            <form method="post" asp-controller="Account" aspcontroller="Logout">
+                <input type="submit" value="Logout" />
+            </form>
+        }
+        else
+        {
+            <a asp-controller="Account" asp-action="Login">Login</a>
+            <a asp-controller="Account" asp-action="Register">Register</a>
+        }
+    </div> 
     <div class="container body-content">
         @RenderBody()
         <hr />

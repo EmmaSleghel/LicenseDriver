@@ -8,6 +8,8 @@ using Data.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Services.Student;
 using Services.Teacher;
+using LicenseDRIVER.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace LicenseDRIVER
 {
@@ -32,6 +34,8 @@ namespace LicenseDRIVER
             services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddMvc();
 
+            services.AddIdentity<User, IdentityRole>()
+               .AddEntityFrameworkStores<DatabaseContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -55,6 +59,7 @@ namespace LicenseDRIVER
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+            app.UseAuthentication();
         }
     }
 }
