@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Data.Entities
 {
-    public class Teacher 
+    public class Teacher :User
     {
         public Guid TeacherId { get; set; }
         public String Name { get; set; }

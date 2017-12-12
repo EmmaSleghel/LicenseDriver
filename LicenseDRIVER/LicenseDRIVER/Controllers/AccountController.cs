@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
 using LicenseDRIVER.Models;
 using Data.Entities;
+using Services.Student;
+using Services.Dtos;
 
 namespace LicenseDRIVER.Controllers
 {
@@ -13,11 +15,13 @@ namespace LicenseDRIVER.Controllers
     {
         private SignInManager<User> _signManager;
         private UserManager<User> _userManager;
+        private IStudentService _studentService;
 
-        public AccountController(UserManager<User> userManager, SignInManager<User> signManager)
+        public AccountController(UserManager<User> userManager, SignInManager<User> signManager, IStudentService studentService)
         {
             _userManager = userManager;
             _signManager = signManager;
+            _studentService = studentService;
         }
         public IActionResult Index()
         {
@@ -33,9 +37,9 @@ namespace LicenseDRIVER.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new User { UserName = model.Username };
+                var user = new Student { UserName = model.Username };
                 var result = await _userManager.CreateAsync(user, model.Password);
-
+                _studentService.CreateStudent(user);
                 if (result.Succeeded)
                 {
                     await _signManager.SignInAsync(user, false);

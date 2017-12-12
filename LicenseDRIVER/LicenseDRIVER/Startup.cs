@@ -32,7 +32,7 @@ namespace LicenseDRIVER
             services.AddTransient<ITeacherService, TeacherService>();
 
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
-            services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),x=>x.MigrationsAssembly("LicenseDRIVER")));
+            services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),x=>x.MigrationsAssembly("Business")));
             services.AddMvc();
             services.AddAutoMapper();
             services.AddIdentity<User, IdentityRole>()

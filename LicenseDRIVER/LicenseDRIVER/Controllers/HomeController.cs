@@ -18,7 +18,6 @@ namespace LicenseDRIVER.Controllers
         }
         public IActionResult Index()
         {
-            var stud = studentService.GetStudentById(new Guid());
             return View();
         }
 

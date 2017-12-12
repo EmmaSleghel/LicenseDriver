@@ -24,6 +24,7 @@ namespace Business.Repository
         public void Add(TEntity entity)
         {
             dbset.Add(entity);
+            dataContext.SaveChanges();
         }
 
         public virtual void Update(TEntity entity)

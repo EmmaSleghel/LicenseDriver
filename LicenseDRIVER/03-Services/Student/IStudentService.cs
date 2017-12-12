@@ -8,5 +8,6 @@ namespace Services.Student
     public interface IStudentService
     {
         StudentDto GetStudentById(Guid id);
+       void CreateStudent(Data.Entities.Student student);
     }
 }

@@ -19,5 +19,9 @@ namespace Services.Student
             return mapper.Map<StudentDto>(studentRepository.GetByKey(id));
 
         }
+        public void  CreateStudent(Data.Entities.Student student)
+        {
+            studentRepository.Add(student);
+        }
     }
 }
