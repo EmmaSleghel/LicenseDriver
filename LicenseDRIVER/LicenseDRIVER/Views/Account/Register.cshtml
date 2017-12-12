@@ -1,11 +1,10 @@
-﻿@model LoginViewModel
+﻿@model RegisterViewModel
 @{
-    ViewBag.Title = "Login";
+    ViewBag.Title = "Register";
 }
-<h2>Login</h2>
+<h1>Register</h1>
 
-<form method="post" asp-controller="Account" asp-action="Login"
-      asp-route-returnurl="@Model.ReturnUrl">
+<form method="post" asp-controller="Account" asp-action="Register">
 
     <div>
         <label asp-for="Username"></label>
@@ -20,11 +19,14 @@
     </div>
 
     <div>
-        <label asp-for="RememberMe"></label>
-        <input asp-for="RememberMe" />
-        <span asp-validation-for="RememberMe"></span>
+        <label asp-for="ConfirmPassword"></label>
+        <input asp-for="ConfirmPassword" />
+        <span asp-validation-for="ConfirmPassword"></span>
     </div>
     @Html.LabelFor(x=>x.IsTeacher)
     @Html.CheckBoxFor(x=>x.IsTeacher)
-    <input type="submit" value="Login" />
-</form> 
+    <div>
+        <input type="submit" value="Register" />
+    </div>
+
+</form>

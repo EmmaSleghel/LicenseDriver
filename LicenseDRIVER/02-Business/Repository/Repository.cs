@@ -41,7 +41,7 @@ namespace Business.Repository
         {
             return dbset.Find(keyValues);
         }
-
+    
         public IQueryable<TEntity> Query(params Expression<Func<TEntity, object>>[] includeProperties)
         {
             IQueryable<TEntity> query = dbset;
