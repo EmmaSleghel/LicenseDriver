@@ -6,12 +6,12 @@ using Business.Infrastructure;
 using Business.Repository;
 using Data.Persistence;
 using Microsoft.EntityFrameworkCore;
-using Services.Student;
-using Services.Teacher;
+
 using LicenseDRIVER.Models;
 using Microsoft.AspNetCore.Identity;
 using AutoMapper;
 using Data.Entities;
+using Services;
 
 namespace LicenseDRIVER
 {
@@ -28,8 +28,7 @@ namespace LicenseDRIVER
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<IUnitOfWork, UnitOfWork>();
-            services.AddTransient<IStudentService, StudentService>();
-            services.AddTransient<ITeacherService, TeacherService>();
+            services.AddTransient<IUserService, UserService>();
 
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),x=>x.MigrationsAssembly("Business")));

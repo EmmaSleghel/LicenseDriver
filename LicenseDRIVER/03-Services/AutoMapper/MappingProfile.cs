@@ -1,8 +1,7 @@
 ﻿using AutoMapper;
+using Data.Entities;
 using Services.Dtos;
-using System;
-using System.Collections.Generic;
-using System.Text;
+
 
 namespace Services.AutoMapper
 {
@@ -10,7 +9,7 @@ namespace Services.AutoMapper
     {
         public MappingProfile()
         {
-            CreateMap<Data.Entities.Student, StudentDto>();
+            CreateMap<User, UserDto>();
         }
     }
 }
