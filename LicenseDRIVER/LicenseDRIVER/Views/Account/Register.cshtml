@@ -2,30 +2,80 @@
 @{
     ViewBag.Title = "Register";
 }
-<h1>Register</h1>
 
-<form method="post" asp-controller="Account" asp-action="Register">
 
-    <div>
-        <label asp-for="Username"></label>
-        <input asp-for="Username" />
-        <span asp-validation-for="Username"></span>
+<div class="container">
+    <div class="row">
+        <br /><br />
+        <br /><br />
+        <div class="col-sm-3"></div>
+
+        <div class="col-sm-6">
+            <div class="card w3-round">
+
+                <header class="w3-container w3-black w3-round">
+                    <h1 class="w3-center">Register  <img align="top" src="~/images/icon.png" /></h1>
+                </header>
+                <br />
+                <div class="w3-container w3-white w3-round ">
+                    <form method="post" asp-controller="Account" asp-action="Register">
+                        <br />
+                        <p>
+
+                            <input asp-for="Username" class="w3-input w3-border w3-round w3-sand w3-large glyphicon " name="first" type="text" placeholder="&#xe008; Username">
+                            <span asp-validation-for="Username"></span>
+                        </p>
+                        <p>
+
+                            <input "Mail" class="w3-input w3-border w3-round w3-sand w3-large glyphicon " name="mail" type="email" placeholder="&#x2709; Email">
+                            
+                        </p>
+                        <p>
+
+                            <input asp-for="Password" class="w3-input w3-border w3-round w3-sand w3-large glyphicon" name="first" type="password" placeholder="&#xe033; Password">
+                            <span asp-validation-for="Password"></span>
+                        </p>
+                        <p>
+
+                            <input asp-for="ConfirmPassword" class="w3-input w3-border w3-round w3-sand w3-large glyphicon" name="second" type="password" placeholder="&#xe033; Confirm password">
+                            <span asp-validation-for="ConfirmPassword"></span>
+                        </p>
+
+                        <br />
+                        <div class="w3-row ">
+                            <div class="w3-container w3-half  ">
+                                <div class="w3-container ">
+                                    <select class="w3-select w3-border-brown w3-hover-border-brown" name="option">
+                                        <option value="" disabled selected>Profesor or Student ?</option>
+                                        <option value="1">Student</option>
+                                        <option value="2">Profesor</option>
+                                    </select>
+                                    
+                                </div>
+
+                            </div>
+
+                            <div class="w3-container w3-half  ">
+                                <div class="label1">
+                                    <input class="w3-button w3-block w3-deep-orange w3-round" type="submit" value="Create account" />
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                    <br />
+                </div>
+
+
+                <br />
+                <div class="label1"><a asp-controller="Account" asp-action="Login"><span class="glyphicon glyphicon-user "></span><b> If you already have an acount Login here</b></a></div>
+            </div>
+        </div>
+
+        <div class="col-sm-3">
+
+        </div>
+
     </div>
-
-    <div>
-        <label asp-for="Password"></label>
-        <input asp-for="Password" />
-        <span asp-validation-for="Password"></span>
-    </div>
-
-    <div>
-        <label asp-for="ConfirmPassword"></label>
-        <input asp-for="ConfirmPassword" />
-        <span asp-validation-for="ConfirmPassword"></span>
-    </div>
-
-    <div>
-        <input type="submit" value="Register" />
-    </div>
-
-</form>
+</div>
