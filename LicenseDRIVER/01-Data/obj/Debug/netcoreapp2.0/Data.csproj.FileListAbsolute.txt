@@ -27,3 +27,12 @@ C:\Bit\LicenseDriver\LicenseDRIVER\01-Data\obj\Debug\netcoreapp2.0\Data.Assembly
 C:\Bit\LicenseDriver\LicenseDRIVER\01-Data\obj\Debug\netcoreapp2.0\Data.dll
 C:\Bit\LicenseDriver\LicenseDRIVER\01-Data\obj\Debug\netcoreapp2.0\Data.pdb
 C:\Bit\LicenseDriver\LicenseDRIVER\01-Data\obj\Debug\netcoreapp2.0\Data.csprojResolveAssemblyReference.cache
+C:\Users\uanca\Desktop\dotNet\Proiect\LicenseDriver\LicenseDRIVER\01-Data\bin\Debug\netcoreapp2.0\Data.deps.json
+C:\Users\uanca\Desktop\dotNet\Proiect\LicenseDriver\LicenseDRIVER\01-Data\bin\Debug\netcoreapp2.0\Data.dll
+C:\Users\uanca\Desktop\dotNet\Proiect\LicenseDriver\LicenseDRIVER\01-Data\bin\Debug\netcoreapp2.0\Data.pdb
+C:\Users\uanca\Desktop\dotNet\Proiect\LicenseDriver\LicenseDRIVER\01-Data\obj\Debug\netcoreapp2.0\Data.csprojResolveAssemblyReference.cache
+C:\Users\uanca\Desktop\dotNet\Proiect\LicenseDriver\LicenseDRIVER\01-Data\obj\Debug\netcoreapp2.0\Data.csproj.CoreCompileInputs.cache
+C:\Users\uanca\Desktop\dotNet\Proiect\LicenseDriver\LicenseDRIVER\01-Data\obj\Debug\netcoreapp2.0\Data.AssemblyInfoInputs.cache
+C:\Users\uanca\Desktop\dotNet\Proiect\LicenseDriver\LicenseDRIVER\01-Data\obj\Debug\netcoreapp2.0\Data.AssemblyInfo.cs
+C:\Users\uanca\Desktop\dotNet\Proiect\LicenseDriver\LicenseDRIVER\01-Data\obj\Debug\netcoreapp2.0\Data.dll
+C:\Users\uanca\Desktop\dotNet\Proiect\LicenseDriver\LicenseDRIVER\01-Data\obj\Debug\netcoreapp2.0\Data.pdb

@@ -1,0 +1,55 @@
+﻿#image1 {
+  filter: blur(5px);
+  position: absolute;
+  height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+#card1 {
+  color: #1f1161; }
+
+body {
+  background-image: url(../images/4.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -1; }
+
+.content {
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 3px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25); }
+
+.label1 {
+  text-align: center !important;
+  color: black !important; }
+
+::-webkit-input-placeholder {
+  font-size: 19px; }
+
+header > h1 > img {
+  height: 40px;
+  width: 40px; }
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #1f1e1e;
+  color: white;
+  text-align: center;
+  margin-bottom: 0px; }
+
+.text-construct {
+  font-size: 60px;
+  color: black;
+  padding-top: 180px;
+  padding-left: 40px; }
+
+.img-construct {
+  padding-top: 120px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
+

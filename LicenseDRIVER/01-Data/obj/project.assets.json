@@ -11037,7 +11037,7 @@
       ]
     },
     "System.Runtime.Serialization.Primitives/4.3.0": {
-      "sha512": "43et91koH5AXYVx5SRo9dj+DZo71yU8Y7ZuZRp79cdFzAxRSB/OamWnrtoORPA2h4zNBcZOyF9x3KIp3gax0mA==",
+      "sha512": "Wz+0KOukJGAlXjtKr+5Xpuxf8+c8739RI1C+A2BoQZT+wMCCoMDDdO8/4IRHfaVINqL78GO8dW8G2lW/e45Mcw==",
       "type": "package",
       "path": "system.runtime.serialization.primitives/4.3.0",
       "files": [
@@ -12600,7 +12600,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Emma\\.nuget\\packages\\": {},
+    "C:\\Users\\uanca\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -12609,17 +12609,17 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Bit\\LicenseDriver\\LicenseDRIVER\\01-Data\\Data.csproj",
+      "projectUniqueName": "C:\\Users\\uanca\\Desktop\\dotNet\\Proiect\\LicenseDriver\\LicenseDRIVER\\01-Data\\Data.csproj",
       "projectName": "Data",
-      "projectPath": "C:\\Bit\\LicenseDriver\\LicenseDRIVER\\01-Data\\Data.csproj",
-      "packagesPath": "C:\\Users\\Emma\\.nuget\\packages\\",
-      "outputPath": "C:\\Bit\\LicenseDriver\\LicenseDRIVER\\01-Data\\obj\\",
+      "projectPath": "C:\\Users\\uanca\\Desktop\\dotNet\\Proiect\\LicenseDriver\\LicenseDRIVER\\01-Data\\Data.csproj",
+      "packagesPath": "C:\\Users\\uanca\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\uanca\\Desktop\\dotNet\\Proiect\\LicenseDriver\\LicenseDRIVER\\01-Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Emma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\uanca\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -12643,27 +12643,27 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": {
+          "AutoMapper": {
             "target": "Package",
-            "version": "2.0.1"
+            "version": "[6.2.2, )"
           },
           "AutoMapper.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
-            "version": "3.2.0"
+            "version": "[3.2.0, )"
+          },
+          "Microsoft.AspNetCore.All": {
+            "target": "Package",
+            "version": "[2.0.3, )"
+          },
+          "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[2.0.1, )"
           },
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "2.0.0",
+            "version": "[2.0.0, )",
             "autoReferenced": true
-          },
-          "AutoMapper": {
-            "target": "Package",
-            "version": "6.2.2"
-          },
-          "Microsoft.AspNetCore.All": {
-            "target": "Package",
-            "version": "2.0.3"
           }
         },
         "imports": [

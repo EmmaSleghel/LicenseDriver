@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "c71420af7b4e238b34fe2147ae1f58fb6796d532"
+    "signature": "cd3f32cd1057276ea6caf156f952e83bd438bbf2"
   },
   "compilationOptions": {
     "defines": [
@@ -25,12 +25,15 @@
         "dependencies": {
           "AutoMapper": "6.2.2",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "3.2.0",
+          "BuildWebCompiler": "1.11.326",
           "Business": "1.0.0",
           "Microsoft.AspNetCore.All": "2.0.3",
           "Microsoft.EntityFrameworkCore": "2.0.1",
           "Microsoft.NETCore.App": "2.0.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.0.0",
-          "Services": "1.0.0"
+          "Services": "1.0.0",
+          "bootstrap": "4.0.0-beta2",
+          "bootstrap.sass": "4.0.0-beta2"
         },
         "runtime": {
           "LicenseDRIVER.dll": {}
@@ -73,6 +76,20 @@
           "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
+      "bootstrap/4.0.0-beta2": {
+        "dependencies": {
+          "jQuery": "3.0.0",
+          "popper.js": "1.12.3"
+        }
+      },
+      "bootstrap.sass/4.0.0-beta2": {
+        "dependencies": {
+          "jQuery": "3.0.0",
+          "popper.js": "1.12.3"
+        }
+      },
+      "BuildWebCompiler/1.11.326": {},
+      "jQuery/3.0.0": {},
       "Libuv/1.10.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.0.0"
@@ -2542,6 +2559,7 @@
           "lib/netstandard1.3/NuGet.Frameworks.dll": {}
         }
       },
+      "popper.js/1.12.3": {},
       "Remotion.Linq/2.1.1": {
         "dependencies": {
           "System.Collections": "4.3.0",
@@ -4346,6 +4364,34 @@
       "path": "automapper.extensions.microsoft.dependencyinjection/3.2.0",
       "hashPath": "automapper.extensions.microsoft.dependencyinjection.3.2.0.nupkg.sha512"
     },
+    "bootstrap/4.0.0-beta2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-uSY4YDdyiwWALFsUy05xOtQxL9z+X/j/btiiqcvhUOnCmF9Yu6WJ1+cbefjFGQLyzw1u6WuisshR0sGmvVO7Sg==",
+      "path": "bootstrap/4.0.0-beta2",
+      "hashPath": "bootstrap.4.0.0-beta2.nupkg.sha512"
+    },
+    "bootstrap.sass/4.0.0-beta2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IXNOduXiw40GBskn42aKKbHmPqX4e+Af136LmKpVK6aA73Is3WOrV5GBQGlc2/9UypeobmCUkoZfr+XAagNijA==",
+      "path": "bootstrap.sass/4.0.0-beta2",
+      "hashPath": "bootstrap.sass.4.0.0-beta2.nupkg.sha512"
+    },
+    "BuildWebCompiler/1.11.326": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OdsoXjkwz/M/rwK1vvIR1CfS4wTCVjylwPCtcbISjGgHA7kSMFfCcAoLn0A3AhNVVMkQ63mDrFQ15hQ4w/qkWA==",
+      "path": "buildwebcompiler/1.11.326",
+      "hashPath": "buildwebcompiler.1.11.326.nupkg.sha512"
+    },
+    "jQuery/3.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xFfntV19HzCtKdJWOp/XT9PUY3SslokTDDLFJZdBug36j1XVhw1+vPQ/n7Gd5y+jdpesn5B1m1yn1qIUq57jlA==",
+      "path": "jquery/3.0.0",
+      "hashPath": "jquery.3.0.0.nupkg.sha512"
+    },
     "Libuv/1.10.0": {
       "type": "package",
       "serviceable": true,
@@ -5571,6 +5617,13 @@
       "path": "nuget.frameworks/4.0.0",
       "hashPath": "nuget.frameworks.4.0.0.nupkg.sha512"
     },
+    "popper.js/1.12.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-i1fdcFnhQLou7tuq0gl0HV0kOlfoI4RCCf0GpUb2QKwmx+ojJaN9JCseU1khDIf0xdHXhqkBXfF/J+W4VopEfQ==",
+      "path": "popper.js/1.12.3",
+      "hashPath": "popper.js.1.12.3.nupkg.sha512"
+    },
     "Remotion.Linq/2.1.1": {
       "type": "package",
       "serviceable": true,
@@ -6246,7 +6299,7 @@
     "System.Runtime.Serialization.Primitives/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-43et91koH5AXYVx5SRo9dj+DZo71yU8Y7ZuZRp79cdFzAxRSB/OamWnrtoORPA2h4zNBcZOyF9x3KIp3gax0mA==",
+      "sha512": "sha512-Wz+0KOukJGAlXjtKr+5Xpuxf8+c8739RI1C+A2BoQZT+wMCCoMDDdO8/4IRHfaVINqL78GO8dW8G2lW/e45Mcw==",
       "path": "system.runtime.serialization.primitives/4.3.0",
       "hashPath": "system.runtime.serialization.primitives.4.3.0.nupkg.sha512"
     },

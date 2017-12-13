@@ -2,27 +2,68 @@
 @{
     ViewBag.Title = "Login";
 }
-<h2>Login</h2>
 
-<form method="post" asp-controller="Account" asp-action="Login"
-      asp-route-returnurl="@Model.ReturnUrl">
 
-    <div>
-        <label asp-for="Username"></label>
-        <input asp-for="Username" />
-        <span asp-validation-for="Username"></span>
+<div class="container">
+    <div class="row">
+        <br /><br />
+        <br /><br />
+        <div class="col-sm-3"></div>
+
+        <div class="col-sm-6">
+            <div class="card w3-round">
+               
+                    <header class="w3-container w3-black w3-round">
+                        <h1 class="w3-center">Login  <img align="top" src="~/images/icon.png" /></h1>
+                    </header>
+                    <br />
+                    <div class="w3-container w3-white w3-round ">
+                        <form method="post" asp-controller="Account" asp-action="Login"
+                              asp-route-returnurl="@Model.ReturnUrl">
+                            <br />
+                            <p>
+
+                                <input asp-for="Username" class="w3-input w3-border w3-round w3-sand w3-large glyphicon " name="first" type="text" placeholder="&#xe008; Username">
+                                <span asp-validation-for="Username"></span>
+                            </p>
+                            <p>
+
+                                <input asp-for="Password" class="w3-input w3-border w3-round w3-sand w3-large glyphicon" name="last" type="password" placeholder="&#xe033; Password">
+                                <span asp-validation-for="Password"></span>
+                            </p>
+
+                            <br />
+                            <div class="w3-row ">
+                                <div class="w3-container w3-half  ">
+                                    <div class="w3-container ">
+                                        <input class="w3-button w3-block w3-deep-orange w3-round " type="submit" value="Let me in" />
+                                    </div>
+
+                                </div>
+
+                                <div class="w3-container w3-half  ">
+                                    <div class="label1">
+                                        <label asp-for="RememberMe"></label>
+                                        <input asp-for="RememberMe" class="w3-check" type="checkbox" />
+                                        <span asp-validation-for="RememberMe"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+                        <br />
+                    </div>
+
+               
+                <br /><br />
+                <div class="label1"><a asp-controller="Account" asp-action="Register"><span class="glyphicon glyphicon-user "></span><b>If you don't have an account Sign Up here</b></a></div>
+            </div>
+            
+        </div>
+
+        <div class="col-sm-3">
+
+        </div>
+
     </div>
-
-    <div>
-        <label asp-for="Password"></label>
-        <input asp-for="Password" />
-        <span asp-validation-for="Password"></span>
-    </div>
-
-    <div>
-        <label asp-for="RememberMe"></label>
-        <input asp-for="RememberMe" />
-        <span asp-validation-for="RememberMe"></span>
-    </div>
-    <input type="submit" value="Login" />
-</form> 
+</div>
