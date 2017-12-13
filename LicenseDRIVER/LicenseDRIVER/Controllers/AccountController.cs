@@ -1,16 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
 using LicenseDRIVER.Models;
-using Data.Entities;
 using Services.Student;
 using Services.Dtos;
-using System.Security.Cryptography;
 using Services.Teacher;
 using Microsoft.AspNetCore.Http;
+using AutoMapper;
 
 namespace LicenseDRIVER.Controllers
 {
@@ -19,13 +15,15 @@ namespace LicenseDRIVER.Controllers
 
         private IStudentService _studentService;
         private ITeacherService _teacherService;
-        private PasswordHasher<UserDto> passwordHasher;
+        private PasswordHasher<UserViewModel> _passwordHasher;
+        private IMapper _mapper;
 
-        public AccountController(IStudentService studentService, ITeacherService teacherService)
+        public AccountController(IStudentService studentService, ITeacherService teacherService, IMapper mapper)
         {
             _studentService = studentService;
             _teacherService = teacherService;
-            this.passwordHasher = new PasswordHasher<UserDto>();
+            _passwordHasher = new PasswordHasher<UserViewModel>();
+            _mapper = mapper;
         }
         public IActionResult Index()
         {
@@ -43,29 +41,19 @@ namespace LicenseDRIVER.Controllers
             {
                 if (model.IsTeacher)
                 {
-                    var teacher = new TeacherDto()
-                    {
-                        TeacherId = Guid.NewGuid(),
-                        Username = model.Username,
-                    };
-                    teacher.Password = passwordHasher.HashPassword(teacher, model.Password);
-                    _teacherService.CreateTeacher(teacher);
-
+                    RegisterNewTeacher(model);
                 }
                 else
                 {
-                    var student = new StudentDto()
-                    {
-                        StudentId = Guid.NewGuid(),
-                        Username = model.Username,
-                    };
-                    student.Password = passwordHasher.HashPassword(student, model.Password);
-                    _studentService.CreateStudent(student);
+                    RegisterNewStudent(model);
                 }
 
             }
+            else
+                return View(model);
             return RedirectToAction("Index", "Home");
         }
+
         [HttpGet]
         public IActionResult Login(string returnUrl = "")
         {
@@ -79,45 +67,63 @@ namespace LicenseDRIVER.Controllers
             {
                 if (model.IsTeacher)
                 {
-                    var teacher = _teacherService.GetTeacherByUsername(model.Username);
+                    var teacherDto= _teacherService.GetTeacherByUsername(model.Username);
+                    var teacher = _mapper.Map<TeacherViewModel>(teacherDto);
                     if (teacher != null)
                     {
-                        var result = passwordHasher.VerifyHashedPassword(teacher, teacher.Password, model.Password);
+                        var result = _passwordHasher.VerifyHashedPassword(teacher, teacher.Password, model.Password);
                         if (result == PasswordVerificationResult.Success)
                         {
                             HttpContext.Session.SetString("User", teacher.Username);
                             return RedirectToAction("Index", "Home");
                         }
-
                     }
-                    else
-                    {
-                        ModelState.AddModelError("", "Invalid login attempt");
-                    }
-
                 }
                 else
                 {
-                    var student = _studentService.GetStudentByUsername(model.Username);
+                    var studentDto= _studentService.GetStudentByUsername(model.Username);
+                    var student = _mapper.Map<StudentViewModel>(studentDto);
                     if (student != null)
                     {
-                        var result = passwordHasher.VerifyHashedPassword(student, student.Password, model.Password);
+                        var result = _passwordHasher.VerifyHashedPassword(student, student.Password, model.Password);
                         if (result == PasswordVerificationResult.Success)
                         {
                             HttpContext.Session.SetString("User", student.Username);
                             return RedirectToAction("Index", "Home");
                         }
                     }
-                    else
-                    { ModelState.AddModelError("", "Invalid login attempt"); }
                 }
             }
+            ModelState.AddModelError("", "Invalid login attempt");
             return View(model);
         }
-        [HttpPost]
         public ActionResult Logout()
         {
+            HttpContext.Session.Clear();
             return RedirectToAction("Index", "Home");
+        }
+        private void RegisterNewTeacher(RegisterViewModel model)
+        {
+            var teacher = new TeacherViewModel()
+            {
+                TeacherId = Guid.NewGuid(),
+                Username = model.Username,
+            };
+            teacher.Password = _passwordHasher.HashPassword(teacher, model.Password);
+            var teacherDto = _mapper.Map<TeacherDto>(teacher);
+
+            _teacherService.CreateTeacher(teacherDto);
+        }
+        private void RegisterNewStudent(RegisterViewModel model)
+        {
+            var student = new StudentViewModel()
+            {
+                StudentId = Guid.NewGuid(),
+                Username = model.Username,
+            };
+            student.Password = _passwordHasher.HashPassword(student, model.Password);
+            var studentDto = _mapper.Map<StudentDto>(student);
+            _studentService.CreateStudent(studentDto);
         }
     }
 }

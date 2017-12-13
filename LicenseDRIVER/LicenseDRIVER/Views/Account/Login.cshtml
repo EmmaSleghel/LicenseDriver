@@ -23,13 +23,13 @@
                             <br />
                             <p>
 
-                                <input asp-for="Username" class="w3-input w3-border w3-round w3-sand w3-large glyphicon " name="first" type="text" placeholder="&#xe008; Username">
-                                <span asp-validation-for="Username"></span>
+                                <input asp-for="@Model.Username" class="w3-input w3-border w3-round w3-sand w3-large glyphicon "  type="text" placeholder="&#xe008; Username">
+                                <span asp-validation-for="@Model.Username"></span>
                             </p>
                             <p>
 
-                                <input asp-for="Password" class="w3-input w3-border w3-round w3-sand w3-large glyphicon" name="last" type="password" placeholder="&#xe033; Password">
-                                <span asp-validation-for="Password"></span>
+                                <input asp-for="@Model.Password" class="w3-input w3-border w3-round w3-sand w3-large glyphicon" type="password" placeholder="&#xe033; Password">
+                                <span asp-validation-for="@Model.Password"></span>
                             </p>
 
                             <br />
@@ -66,11 +66,5 @@
         </div>
 
     </div>
-<<<<<<< HEAD
 </div>
-=======
-    @Html.LabelFor(x=>x.IsTeacher)
-    @Html.CheckBoxFor(x=>x.IsTeacher)
-    <input type="submit" value="Login" />
-</form> 
->>>>>>> master
+

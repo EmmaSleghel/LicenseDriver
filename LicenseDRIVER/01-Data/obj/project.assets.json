@@ -12600,7 +12600,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\uanca\\.nuget\\packages\\": {},
+    "C:\\Users\\emmas\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -12609,17 +12609,17 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\uanca\\Desktop\\dotNet\\Proiect\\LicenseDriver\\LicenseDRIVER\\01-Data\\Data.csproj",
+      "projectUniqueName": "C:\\Users\\emmas\\Documents\\LicenseDriver\\LicenseDRIVER\\01-Data\\Data.csproj",
       "projectName": "Data",
-      "projectPath": "C:\\Users\\uanca\\Desktop\\dotNet\\Proiect\\LicenseDriver\\LicenseDRIVER\\01-Data\\Data.csproj",
-      "packagesPath": "C:\\Users\\uanca\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\uanca\\Desktop\\dotNet\\Proiect\\LicenseDriver\\LicenseDRIVER\\01-Data\\obj\\",
+      "projectPath": "C:\\Users\\emmas\\Documents\\LicenseDriver\\LicenseDRIVER\\01-Data\\Data.csproj",
+      "packagesPath": "C:\\Users\\emmas\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\emmas\\Documents\\LicenseDriver\\LicenseDRIVER\\01-Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\uanca\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\emmas\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -12643,27 +12643,27 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
-          "AutoMapper": {
+          "Microsoft.EntityFrameworkCore": {
             "target": "Package",
-            "version": "[6.2.2, )"
+            "version": "2.0.1"
           },
           "AutoMapper.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
-            "version": "[3.2.0, )"
-          },
-          "Microsoft.AspNetCore.All": {
-            "target": "Package",
-            "version": "[2.0.3, )"
-          },
-          "Microsoft.EntityFrameworkCore": {
-            "target": "Package",
-            "version": "[2.0.1, )"
+            "version": "3.2.0"
           },
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[2.0.0, )",
+            "version": "2.0",
             "autoReferenced": true
+          },
+          "AutoMapper": {
+            "target": "Package",
+            "version": "6.2.2"
+          },
+          "Microsoft.AspNetCore.All": {
+            "target": "Package",
+            "version": "2.0.3"
           }
         },
         "imports": [

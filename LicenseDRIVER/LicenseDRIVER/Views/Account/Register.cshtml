@@ -3,7 +3,6 @@
     ViewBag.Title = "Register";
 }
 
-
 <div class="container">
     <div class="row">
         <br /><br />
@@ -13,7 +12,6 @@
         <div class="col-sm-6">
             <div class="card w3-round">
 
-<<<<<<< HEAD
                 <header class="w3-container w3-black w3-round">
                     <h1 class="w3-center">Register  <img align="top" src="~/images/icon.png" /></h1>
                 </header>
@@ -23,23 +21,24 @@
                         <br />
                         <p>
 
-                            <input asp-for="Username" class="w3-input w3-border w3-round w3-sand w3-large glyphicon " name="first" type="text" placeholder="&#xe008; Username">
-                            <span asp-validation-for="Username"></span>
+                            <input asp-for="@Model.Username" class="w3-input w3-border w3-round w3-sand w3-large glyphicon " type="text" placeholder="&#xe008; Username">
+                            <span asp-validation-for="@Model.Username"></span>
                         </p>
                         <p>
 
-                            <input "Mail" class="w3-input w3-border w3-round w3-sand w3-large glyphicon " name="mail" type="email" placeholder="&#x2709; Email">
+                            <input asp-for="@Model.Email" class="w3-input w3-border w3-round w3-sand w3-large glyphicon "  type="email" placeholder="&#x2709; Email">
+                            <span asp-validation-for="@Model.Email"></span>
                             
                         </p>
                         <p>
 
-                            <input asp-for="Password" class="w3-input w3-border w3-round w3-sand w3-large glyphicon" name="first" type="password" placeholder="&#xe033; Password">
-                            <span asp-validation-for="Password"></span>
+                            <input asp-for="@Model.Password" class="w3-input w3-border w3-round w3-sand w3-large glyphicon" name="first" type="password" placeholder="&#xe033; Password">
+                            <span asp-validation-for="@Model.Password"></span>
                         </p>
                         <p>
 
-                            <input asp-for="ConfirmPassword" class="w3-input w3-border w3-round w3-sand w3-large glyphicon" name="second" type="password" placeholder="&#xe033; Confirm password">
-                            <span asp-validation-for="ConfirmPassword"></span>
+                            <input asp-for="@Model.ConfirmPassword" class="w3-input w3-border w3-round w3-sand w3-large glyphicon"  type="password" placeholder="&#xe033; Confirm password">
+                            <span asp-validation-for="@Model.ConfirmPassword"></span>
                         </p>
 
                         <br />
@@ -48,25 +47,14 @@
                                 <div class="w3-container ">
                                     <select class="w3-select w3-border-brown w3-hover-border-brown" name="option">
                                         <option value="" disabled selected>Profesor or Student ?</option>
-                                        <option value="1">Student</option>
-                                        <option value="2">Profesor</option>
+                                        <option name="@Model.IsTeacher" value="false">Student</option>
+                                        <option name="@Model.IsTeacher" value="true">Profesor</option>
                                     </select>
                                     
                                 </div>
 
                             </div>
-=======
-    <div>
-        <label asp-for="ConfirmPassword"></label>
-        <input asp-for="ConfirmPassword" />
-        <span asp-validation-for="ConfirmPassword"></span>
-    </div>
-    @Html.LabelFor(x=>x.IsTeacher)
-    @Html.CheckBoxFor(x=>x.IsTeacher)
-    <div>
-        <input type="submit" value="Register" />
-    </div>
->>>>>>> master
+
 
                             <div class="w3-container w3-half  ">
                                 <div class="label1">
@@ -86,9 +74,7 @@
             </div>
         </div>
 
-        <div class="col-sm-3">
 
-        </div>
 
     </div>
 </div>

@@ -1,20 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using LicenseDRIVER.Models;
-using Services;
 
 namespace LicenseDRIVER.Controllers
 {
     public class HomeController : Controller
     {
-        private IUserService userService { get; set; }
-        public HomeController(IUserService userService)
+        public HomeController()
         {
-            this.userService = userService;
+           
         }
         public IActionResult Index()
         {
