@@ -8,20 +8,24 @@ using LicenseDRIVER.Models;
 using Data.Entities;
 using Services.Student;
 using Services.Dtos;
+using System.Security.Cryptography;
+using Services.Teacher;
+using Microsoft.AspNetCore.Http;
 
 namespace LicenseDRIVER.Controllers
 {
     public class AccountController : Controller
     {
-        private SignInManager<User> _signManager;
-        private UserManager<User> _userManager;
-        private IStudentService _studentService;
 
-        public AccountController(UserManager<User> userManager, SignInManager<User> signManager, IStudentService studentService)
+        private IStudentService _studentService;
+        private ITeacherService _teacherService;
+        private PasswordHasher<UserDto> passwordHasher;
+
+        public AccountController(IStudentService studentService, ITeacherService teacherService)
         {
-            _userManager = userManager;
-            _signManager = signManager;
             _studentService = studentService;
+            _teacherService = teacherService;
+            this.passwordHasher = new PasswordHasher<UserDto>();
         }
         public IActionResult Index()
         {
@@ -33,27 +37,34 @@ namespace LicenseDRIVER.Controllers
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> Register(RegisterViewModel model)
+        public ActionResult Register(RegisterViewModel model)
         {
             if (ModelState.IsValid)
             {
-                var user = new Student { UserName = model.Username };
-                var result = await _userManager.CreateAsync(user, model.Password);
-                _studentService.CreateStudent(user);
-                if (result.Succeeded)
+                if (model.IsTeacher)
                 {
-                    await _signManager.SignInAsync(user, false);
-                    return RedirectToAction("Index", "Home");
+                    var teacher = new TeacherDto()
+                    {
+                        TeacherId = Guid.NewGuid(),
+                        Username = model.Username,
+                    };
+                    teacher.Password = passwordHasher.HashPassword(teacher, model.Password);
+                    _teacherService.CreateTeacher(teacher);
+
                 }
                 else
                 {
-                    foreach (var error in result.Errors)
+                    var student = new StudentDto()
                     {
-                        ModelState.AddModelError("", error.Description);
-                    }
+                        StudentId = Guid.NewGuid(),
+                        Username = model.Username,
+                    };
+                    student.Password = passwordHasher.HashPassword(student, model.Password);
+                    _studentService.CreateStudent(student);
                 }
+
             }
-            return View();
+            return RedirectToAction("Index", "Home");
         }
         [HttpGet]
         public IActionResult Login(string returnUrl = "")
@@ -62,32 +73,50 @@ namespace LicenseDRIVER.Controllers
             return View(model);
         }
         [HttpPost]
-        public async Task<IActionResult> Login(LoginViewModel model)
+        public ActionResult Login(LoginViewModel model)
         {
             if (ModelState.IsValid)
             {
-                var result = await _signManager.PasswordSignInAsync(model.Username,
-                   model.Password, model.RememberMe, false);
-
-                if (result.Succeeded)
+                if (model.IsTeacher)
                 {
-                    if (!string.IsNullOrEmpty(model.ReturnUrl) && Url.IsLocalUrl(model.ReturnUrl))
+                    var teacher = _teacherService.GetTeacherByUsername(model.Username);
+                    if (teacher != null)
                     {
-                        return Redirect(model.ReturnUrl);
+                        var result = passwordHasher.VerifyHashedPassword(teacher, teacher.Password, model.Password);
+                        if (result == PasswordVerificationResult.Success)
+                        {
+                            HttpContext.Session.SetString("User", teacher.Username);
+                            return RedirectToAction("Index", "Home");
+                        }
+
                     }
                     else
                     {
-                        return RedirectToAction("Index", "Home");
+                        ModelState.AddModelError("", "Invalid login attempt");
                     }
+
+                }
+                else
+                {
+                    var student = _studentService.GetStudentByUsername(model.Username);
+                    if (student != null)
+                    {
+                        var result = passwordHasher.VerifyHashedPassword(student, student.Password, model.Password);
+                        if (result == PasswordVerificationResult.Success)
+                        {
+                            HttpContext.Session.SetString("User", student.Username);
+                            return RedirectToAction("Index", "Home");
+                        }
+                    }
+                    else
+                    { ModelState.AddModelError("", "Invalid login attempt"); }
                 }
             }
-            ModelState.AddModelError("", "Invalid login attempt");
             return View(model);
         }
         [HttpPost]
-        public async Task<IActionResult> Logout()
+        public ActionResult Logout()
         {
-            await _signManager.SignOutAsync();
             return RedirectToAction("Index", "Home");
         }
     }

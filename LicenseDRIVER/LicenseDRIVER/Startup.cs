@@ -32,11 +32,11 @@ namespace LicenseDRIVER
             services.AddTransient<ITeacherService, TeacherService>();
 
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
-            services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),x=>x.MigrationsAssembly("Business")));
-            services.AddMvc();
+            services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),x=>x.MigrationsAssembly("LicenseDRIVER")));
+            services.AddMvc().AddSessionStateTempDataProvider();
+            services.AddSession();
             services.AddAutoMapper();
-            services.AddIdentity<User, IdentityRole>()
-               .AddEntityFrameworkStores<DatabaseContext>();
+           
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -53,7 +53,7 @@ namespace LicenseDRIVER
             }
 
             app.UseStaticFiles();
-
+            app.UseSession();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

@@ -5,16 +5,16 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using LicenseDRIVER.Models;
-using Services.Student;
+using Services;
 
 namespace LicenseDRIVER.Controllers
 {
     public class HomeController : Controller
     {
-        private IStudentService studentService { get; set; }
-        public HomeController(IStudentService studentService)
+        private IUserService userService { get; set; }
+        public HomeController(IUserService userService)
         {
-            this.studentService = studentService;
+            this.userService = userService;
         }
         public IActionResult Index()
         {

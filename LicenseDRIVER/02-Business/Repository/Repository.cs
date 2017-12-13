@@ -24,7 +24,6 @@ namespace Business.Repository
         public void Add(TEntity entity)
         {
             dbset.Add(entity);
-            dataContext.SaveChanges();
         }
 
         public virtual void Update(TEntity entity)
@@ -42,7 +41,7 @@ namespace Business.Repository
         {
             return dbset.Find(keyValues);
         }
-
+    
         public IQueryable<TEntity> Query(params Expression<Func<TEntity, object>>[] includeProperties)
         {
             IQueryable<TEntity> query = dbset;
