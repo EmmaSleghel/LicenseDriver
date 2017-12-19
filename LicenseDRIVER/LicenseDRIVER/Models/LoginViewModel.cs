@@ -16,7 +16,7 @@ namespace LicenseDRIVER.Models
         [Display(Name = "Remember Me")]
         public bool RememberMe { get; set; }
         public string ReturnUrl { get; set; }
-        public bool IsTeacher { get; set; }
+        public TypeOfUser Type { get; set; }
 
     }
 }

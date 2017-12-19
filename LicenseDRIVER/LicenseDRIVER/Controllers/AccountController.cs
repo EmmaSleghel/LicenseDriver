@@ -32,14 +32,18 @@ namespace LicenseDRIVER.Controllers
         [HttpGet]
         public ViewResult Register()
         {
-            return View();
+            var model = new RegisterViewModel()
+            {
+
+            };
+            return View(model);
         }
         [HttpPost]
         public ActionResult Register(RegisterViewModel model)
         {
             if (ModelState.IsValid)
             {
-                if (model.IsTeacher)
+                if (model.Type==TypeOfUser.Teacher)
                 {
                     RegisterNewTeacher(model);
                 }
@@ -65,7 +69,7 @@ namespace LicenseDRIVER.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (model.IsTeacher)
+                if (model.Type==TypeOfUser.Teacher)
                 {
                     var teacherDto= _teacherService.GetTeacherByUsername(model.Username);
                     var teacher = _mapper.Map<TeacherViewModel>(teacherDto);
