@@ -12,7 +12,9 @@ namespace Data.Persistence
          
         }
 
-       public virtual DbSet<User> Users { get; set; }
+       public virtual DbSet<Teacher> Teachers { get; set; }
+        public virtual DbSet<Student> Students { get; set; }
+
 
 
 
