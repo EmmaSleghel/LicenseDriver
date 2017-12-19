@@ -12673,7 +12673,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\emmas\\.nuget\\packages\\": {},
+    "C:\\Users\\rciobotaru\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -12682,17 +12682,17 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\emmas\\Documents\\LicenseDriver\\LicenseDRIVER\\03-Services\\Services.csproj",
+      "projectUniqueName": "D:\\Teme\\ANUL III\\Sem1\\dotNet\\Proiect\\SRC\\LicenseDriver\\LicenseDRIVER\\03-Services\\Services.csproj",
       "projectName": "Services",
-      "projectPath": "C:\\Users\\emmas\\Documents\\LicenseDriver\\LicenseDRIVER\\03-Services\\Services.csproj",
-      "packagesPath": "C:\\Users\\emmas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\emmas\\Documents\\LicenseDriver\\LicenseDRIVER\\03-Services\\obj\\",
+      "projectPath": "D:\\Teme\\ANUL III\\Sem1\\dotNet\\Proiect\\SRC\\LicenseDriver\\LicenseDRIVER\\03-Services\\Services.csproj",
+      "packagesPath": "C:\\Users\\rciobotaru\\.nuget\\packages\\",
+      "outputPath": "D:\\Teme\\ANUL III\\Sem1\\dotNet\\Proiect\\SRC\\LicenseDriver\\LicenseDRIVER\\03-Services\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\emmas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\rciobotaru\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -12705,8 +12705,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\Users\\emmas\\Documents\\LicenseDriver\\LicenseDRIVER\\02-Business\\Business.csproj": {
-              "projectPath": "C:\\Users\\emmas\\Documents\\LicenseDriver\\LicenseDRIVER\\02-Business\\Business.csproj"
+            "D:\\Teme\\ANUL III\\Sem1\\dotNet\\Proiect\\SRC\\LicenseDriver\\LicenseDRIVER\\02-Business\\Business.csproj": {
+              "projectPath": "D:\\Teme\\ANUL III\\Sem1\\dotNet\\Proiect\\SRC\\LicenseDriver\\LicenseDRIVER\\02-Business\\Business.csproj"
             }
           }
         }
@@ -12735,7 +12735,7 @@
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "2.0",
+            "version": "2.0.0",
             "autoReferenced": true
           },
           "AutoMapper": {
