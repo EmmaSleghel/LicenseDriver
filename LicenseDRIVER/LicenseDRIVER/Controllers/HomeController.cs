@@ -1,17 +1,31 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using LicenseDRIVER.Models;
+using System;
+using Services.Student;
+using Services.Teacher;
+using AutoMapper;
 
 namespace LicenseDRIVER.Controllers
 {
     public class HomeController : Controller
     {
-        public HomeController()
+        private IStudentService _studentService;
+        private ITeacherService _teacherService;
+        private IMapper _mapper;
+
+        public HomeController(IStudentService studentService, ITeacherService teacherService, IMapper mapper)
         {
-           
+            _studentService = studentService;
+            _teacherService = teacherService;
+            _mapper = mapper;
         }
-        public IActionResult Index()
+    
+        [HttpGet]
+        public IActionResult Index(Guid id)
         {
+        
+
             return View();
         }
 

@@ -20,7 +20,9 @@ namespace Services.Student
         }
         public StudentDto GetStudentById(Guid id)
         {
-            return mapper.Map<StudentDto>(studentRepository.GetByKey(id));
+            var student = studentRepository.GetByKey(id);
+            if (student == null) return null;
+            return mapper.Map<StudentDto>(student);
 
         }
         public void  CreateStudent(StudentDto student)

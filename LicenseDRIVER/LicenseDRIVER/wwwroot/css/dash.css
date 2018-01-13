@@ -1,0 +1,19 @@
+
+.right1 {
+    position: relative;
+    left: 80px;
+}
+
+.right2 {
+    position: relative;
+    left: 70px;
+}
+.margin1{
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+.color{
+    background-color: rgb(243, 242, 242);
+
+}

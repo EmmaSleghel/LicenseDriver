@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Services.Teacher;
 using AutoMapper;
+using LicenseDRIVER.Models;
 
 namespace LicenseDRIVER.Controllers
 {
@@ -17,9 +18,17 @@ namespace LicenseDRIVER.Controllers
             _teacherService = teacherService;
             _mapper = mapper;
         }
-        public IActionResult Index()
+        public IActionResult Index(Guid id)
         {
-            return View();
+            var teacher = _teacherService.GetTeacherById(id);
+            var teacherviewmodel = Mapper.Map<TeacherViewModel>(teacher);
+            return View(teacherviewmodel);
+        }
+        public IActionResult Profile(Guid id)
+        {
+            var teacher = _teacherService.GetTeacherById(id);
+            var teacherviewmodel = Mapper.Map<TeacherViewModel>(teacher);
+            return View(teacherviewmodel);
         }
     }
 }

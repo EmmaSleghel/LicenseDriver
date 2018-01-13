@@ -46,16 +46,20 @@ namespace LicenseDRIVER.Controllers
                 if (model.Type==TypeOfUser.Teacher)
                 {
                     RegisterNewTeacher(model);
+                    return RedirectToAction("Index", "Teacher", new { id = model.Id });
+
                 }
                 else
                 {
                     RegisterNewStudent(model);
+                    return RedirectToAction("Index", "Student", new { id = model.Id });
+
                 }
 
             }
-            else
+           
                 return View(model);
-            return RedirectToAction("Index", "Home");
+            
         }
 
         [HttpGet]
@@ -79,7 +83,7 @@ namespace LicenseDRIVER.Controllers
                         if (result == PasswordVerificationResult.Success)
                         {
                             HttpContext.Session.SetString("User", teacher.Username);
-                            return RedirectToAction("Index", "Home");
+                            return RedirectToAction("Index", "Teacher", new { id = teacher.TeacherId });
                         }
                     }
                 }
@@ -93,7 +97,7 @@ namespace LicenseDRIVER.Controllers
                         if (result == PasswordVerificationResult.Success)
                         {
                             HttpContext.Session.SetString("User", student.Username);
-                            return RedirectToAction("Index", "Home");
+                            return RedirectToAction("Index", "Student", new { id = student.StudentId });
                         }
                     }
                 }
@@ -113,6 +117,7 @@ namespace LicenseDRIVER.Controllers
                 TeacherId = Guid.NewGuid(),
                 Username = model.Username,
             };
+            model.Id = teacher.TeacherId;
             teacher.Password = _passwordHasher.HashPassword(teacher, model.Password);
             var teacherDto = _mapper.Map<TeacherDto>(teacher);
 
@@ -125,6 +130,7 @@ namespace LicenseDRIVER.Controllers
                 StudentId = Guid.NewGuid(),
                 Username = model.Username,
             };
+            model.Id = student.StudentId;
             student.Password = _passwordHasher.HashPassword(student, model.Password);
             var studentDto = _mapper.Map<StudentDto>(student);
             _studentService.CreateStudent(studentDto);

@@ -20,6 +20,7 @@ namespace LicenseDRIVER.Models
         public string Email { get; set; }
 
         public TypeOfUser Type { get; set; }
+        public Guid Id { get; set; }
 
     }
     public enum TypeOfUser

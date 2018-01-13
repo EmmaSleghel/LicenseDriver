@@ -22,8 +22,9 @@ namespace Services.Teacher
         }
         public TeacherDto GetTeacherById(Guid id)
         {
-            return mapper.Map<TeacherDto>(teacherRepository.GetByKey(id));
-
+            var teacher = teacherRepository.GetByKey(id);
+            if (teacher == null) return null;
+            return mapper.Map<TeacherDto>(teacher);
         }
         public void CreateTeacher(TeacherDto teacher)
         {
