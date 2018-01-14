@@ -3,161 +3,156 @@
 @{
     ViewData["Title"] = "Profile";
 }
-<div class="wrapper">
-    <div class="sidebar" data-image="img/sidebar-5.jpg">
-        <!--
-            Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red"
+<br /><br />
+      <div class="wrapper">
+          <div class="sidebar" data-image="~/images/sidebar-5.jpg">
 
-            Tip 2: you can also add an image using data-image tag
-        -->
-        <div class="sidebar-wrapper">
-            <div class="logo">
-                <!-- <a href="http://www.creative-tim.com" class="simple-text">
-                    Creative Tim
-                </a> -->
-                <div class="w3-panel" style="width:100%">
-                    <button class="w3-button w3-block w3-round w3-padding-small w3-flat-turquoise"><span class="simple-text">Add task</span></button>
-                </div>
-            </div>
-            <ul class="nav">
-                <li>
-                    <a class="nav-link" href="dash.html">
-                        <i class="nc-icon nc-chart-pie-35"></i>
-                        <p>Dashboard</p>
-                    </a>
-                </li>
-                <li>
-                    <a class="nav-link" href="./user.html">
-                        <i class="nc-icon nc-circle-09"></i>
-                        <p>Invite..</p>
-                    </a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="profile.html">
-                        <i class="nc-icon nc-circle-09"></i>
-                        <p>User Profile</p>
-                    </a>
-                </li>
-                <li>
-                    <a class="nav-link" href="student_list.html">
-                        <i class="nc-icon nc-notes"></i>
-                        <p>Students list</p>
-                    </a>
-                </li>
+              <div class="sidebar-wrapper">
+                  <br /><br />
+                  <div class="logo">
 
-                <li>
-                    <a class="nav-link" href="notification.html">
-                        <i class="nc-icon nc-bell-55"></i>
-                        <p>Notifications</p>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="main-panel">
-        <div class="content">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-1">
-                    </div>
-                    <div class="col-md-10">
-                        <div class="w3-container">
-                            <div class=" w3-card-2 w3-white">
-                                <header class="w3-container w3-teal">
-                                    <h1>Edit profile</h1>
-                                </header>
-                                <div class="w3-container">
-                                    <form>
-                                        <div class="row">
-                                            <br />
-                                            <div class="col-md-5 pr-1">
-                                                <div class="form-group">
-                                                    <label>Faculty(disabled)</label>
-                                                    <input type="text" class="form-control" disabled="" placeholder="Faculty" value="Informatics">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3 px-1">
-                                                <div class="form-group">
-                                                    <label>Username</label>
-                                                    <input type="text" class="form-control" placeholder="Username" value="michael23">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4 pl-1">
-                                                <div class="form-group">
-                                                    <label for="exampleInputEmail1">Email address</label>
-                                                    <input type="email" class="form-control" placeholder="Email" value="michael23@gmail.com">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6 pr-1">
-                                                <div class="form-group">
-                                                    <label>First Name</label>
-                                                    <input type="text" class="form-control" placeholder="first name" value="Mike">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 pl-1">
-                                                <div class="form-group">
-                                                    <label>Last Name</label>
-                                                    <input type="text" class="form-control" placeholder="Last Name" value="Smith">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <label>Study of:</label>
-                                                    <input type="text" class="form-control" placeholder="Study" value="Artificial Inteligence">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-4 pr-1">
-                                                <div class="form-group">
-                                                    <label>City</label>
-                                                    <input type="text" class="form-control" placeholder="City" value="Amsterdam">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4 px-1">
-                                                <div class="form-group">
-                                                    <label>Country</label>
-                                                    <input type="text" class="form-control" placeholder="Country" value="Netherlands">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4 pl-1">
-                                                <div class="form-group">
-                                                    <label>Adress</label>
-                                                    <input type="number" class="form-control" placeholder="Adress">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <label>What I want from you:</label>
-                                                    <textarea rows="4" cols="80" class="form-control" placeholder="Here can you describe your condition" value="Mike">I want all to have 10 at least 3 subjects.</textarea>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <footer class="w3-container">
-                                            <button type="submit" class="w3-btn w3-teal">Update Profile</button>
-                                            <br /> <br />
-                                        </footer>
-
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-1">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+                      <div class="w3-panel" style="width:100%">
+                          <button class="w3-button w3-block w3-round w3-padding-small w3-flat-turquoise"><span class="simple-text">Add task</span></button>
+                      </div>
+                  </div>
+                  <ul class="nav">
+                      <li >
+                          <a asp-controller="Teacher" asp-action="Index" class="nav-link">
+                              <i class="nc-icon nc-chart-pie-35"></i>
+                              <p>Dashboard</p>
+                          </a>
+                      </li>
+                      <li>
+                          <a class="nav-link" href="./user.html">
+                              <i class="nc-icon nc-circle-09"></i>
+                              <p>Invite..</p>
+                          </a>
+                      </li>
+                      <li class="nav-item active">
+                          <a asp-controller="Teacher" asp-action="Profile" class="nav-link">
+                              <i class="nc-icon nc-circle-09"></i>
+                              <p>Profile</p>
+                          </a>
+                      </li>
+                      <li>
+                          <a class="nav-link" href="student_list.html">
+                              <i class="nc-icon nc-notes"></i>
+                              <p>Students list</p>
+                          </a>
+                      </li>
+                      <li>
+                          <a class="nav-link" href="notification.html">
+                              <i class="nc-icon nc-bell-55"></i>
+                              <p>Notifications</p>
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+          <div class="main-panel">
+              <div class="content">
+                  <div class="container-fluid">
+                      <div class="row">
+                          <div class="col-md-1">
+                          </div>
+                          <div class="col-md-10">
+                              <div class="w3-container">
+                                  <div class=" w3-card-2 w3-white">
+                                      <header class="w3-container w3-teal">
+                                          <h1>Edit profile</h1>
+                                      </header>
+                                      <div class="w3-container">
+                                          <form>
+                                              <div class="row">
+                                                  <br />
+                                                  <div class="col-md-5 pr-1">
+                                                      <div class="form-group">
+                                                          <label>Faculty(disabled)</label>
+                                                          <input type="text" class="form-control" disabled="" placeholder="Faculty" value="Informatics">
+                                                      </div>
+                                                  </div>
+                                                  <div class="col-md-3 px-1">
+                                                      <div class="form-group">
+                                                          <label>Username</label>
+                                                          <input type="text" class="form-control" placeholder="Username" value="michael23">
+                                                      </div>
+                                                  </div>
+                                                  <div class="col-md-4 pl-1">
+                                                      <div class="form-group">
+                                                          <label for="exampleInputEmail1">Email address</label>
+                                                          <input type="email" class="form-control" placeholder="Email" value="michael23@gmail.com">
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                              <div class="row">
+                                                  <div class="col-md-6 pr-1">
+                                                      <div class="form-group">
+                                                          <label>First Name</label>
+                                                          <input type="text" class="form-control" placeholder="first name" value="Mike">
+                                                      </div>
+                                                  </div>
+                                                  <div class="col-md-6 pl-1">
+                                                      <div class="form-group">
+                                                          <label>Last Name</label>
+                                                          <input type="text" class="form-control" placeholder="Last Name" value="Smith">
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                              <div class="row">
+                                                  <div class="col-md-12">
+                                                      <div class="form-group">
+                                                          <label>Study of:</label>
+                                                          <input type="text" class="form-control" placeholder="Study" value="Artificial Inteligence">
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                              <div class="row">
+                                                  <div class="col-md-4 pr-1">
+                                                      <div class="form-group">
+                                                          <label>City</label>
+                                                          <input type="text" class="form-control" placeholder="City" value="Amsterdam">
+                                                      </div>
+                                                  </div>
+                                                  <div class="col-md-4 px-1">
+                                                      <div class="form-group">
+                                                          <label>Country</label>
+                                                          <input type="text" class="form-control" placeholder="Country" value="Netherlands">
+                                                      </div>
+                                                  </div>
+                                                  <div class="col-md-4 pl-1">
+                                                      <div class="form-group">
+                                                          <label>Adress</label>
+                                                          <input type="number" class="form-control" placeholder="Adress">
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                              <div class="row">
+                                                  <div class="col-md-12">
+                                                      <div class="form-group">
+                                                          <label>What I want from you:</label>
+                                                          <textarea rows="4" cols="80" class="form-control" placeholder="Here can you describe your condition" value="Mike">I want all to have 10 at least 3 subjects.</textarea>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                              <div class="w3-container">
+                                                  <button type="submit" class="w3-btn w3-teal">Update Profile</button>
+                                                  <br /> <br />
+                                              </div>
+                                          </form>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-md-1">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <footer class="text-center">
+                  <p>&copy; 2018 - LicenseDRIVER</p>
+              </footer>
+          </div>
+      </div>
 
 
 <script src="js/core/jquery.3.2.1.min.js" type="text/javascript"></script>

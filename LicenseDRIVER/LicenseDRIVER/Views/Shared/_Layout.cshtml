@@ -10,10 +10,31 @@
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
         <link rel="stylesheet" href="~/css/w3css.css" />
-        <link rel="stylesheet" href="~/sass/login.css" />
-        <link href="css/dash.css" rel="stylesheet" />
+        <link rel="stylesheet" href="css/dash.css" />
+        <link rel="stylesheet" href="~/css/animate.min.css" />
+        <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/css/dash.css" />
+        <link rel="stylesheet" href="~/css/light-bootstrap-dashboard.css" />
+        <link rel="stylesheet" href="~/css/pe-icon-7-stroke.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
 
-       
+
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+
+        <link rel="stylesheet" href="~/sass/MainSASS.css" />
+
+        <script @Url.Content("~/js/bootstrap-notify.js")></script>
+        <script @Url.Content("~/js/bootstrap-switch.js")></script>
+        <script @Url.Content("~/js/jquery.3.2.1.min.js")></script>
+        <script @Url.Content("~/js/bootstrap.min.js")></script>
+        <script @Url.Content("~/js/chartist.min.js")></script>
+        <script @Url.Content("~/js/light-bootstrap-dashboard.js")></script>
+        <script @Url.Content("~/js/popper.min.js")></script>
+        <script @Url.Content("~/js/site.js")></script>
+
     </environment>
     <environment exclude="Development">
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -24,9 +45,9 @@
 </head>
 <body>
     
-    <div >
-        
-        <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div>
+
+        @*<nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -43,32 +64,51 @@
                         <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
                         <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
                     </ul>
-                    
+
                         @if (User.Identity.IsAuthenticated)
                         {
                             <div>@User.Identity.Name</div>
                             <form method="post" asp-controller="Account" aspcontroller="Logout">
                                 <input type="submit" value="Logout" />
                             </form>
-                        }                     
+                        }
                         <ul class="nav navbar-nav navbar-right">
                             <li><a asp-controller="Account" asp-action="Login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                             <li><a asp-controller="Account" asp-action="Register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
                         </ul>
                 </div>
-                
+
+            </div>
+        </nav>*@
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand pad2"><img class="logo2" src="~/images/white_logo-01.png" /></a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                <div>@User.Identity.Name</div>
+                <form method="post" asp-controller="Account" aspcontroller="Logout">
+                    <input type="submit" value="Logout" />
+                </form>
+                        }
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a asp-controller="Account" asp-action="Login"><span class="glyphicon glyphicon-log-in"></span>LOGIN</a></li>
+                        <li><a asp-controller="Account" asp-action="Register"><span class="glyphicon glyphicon-user"></span>SIGN UP</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a asp-area="" asp-controller="Home" asp-action="Index">HOME</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
-       
-        <div class="container body-content">
-            @RenderBody()
-           
-            <footer>
-                <br />
-                <p>&copy; 2017 - LicenseDRIVER</p>
-                <br />
-            </footer>
-        </div>
+
+
+        @RenderBody()
+
 
         <environment include="Development">
             <script src="~/lib/jquery/dist/jquery.js"></script>
@@ -90,7 +130,6 @@
             </script>
             <script src="~/js/site.min.js" asp-append-version="true"></script>
         </environment>
-
         @RenderSection("Scripts", required: false)
     </div>
 </body>
