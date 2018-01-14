@@ -12673,7 +12673,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\emmas\\.nuget\\packages\\": {},
+    "C:\\Users\\uanca\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -12682,17 +12682,17 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\emmas\\Documents\\LicenseDriver\\LicenseDRIVER\\03-Services\\Services.csproj",
+      "projectUniqueName": "C:\\Users\\uanca\\Desktop\\proiect dotNet\\LicenseDriver\\LicenseDRIVER\\03-Services\\Services.csproj",
       "projectName": "Services",
-      "projectPath": "C:\\Users\\emmas\\Documents\\LicenseDriver\\LicenseDRIVER\\03-Services\\Services.csproj",
-      "packagesPath": "C:\\Users\\emmas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\emmas\\Documents\\LicenseDriver\\LicenseDRIVER\\03-Services\\obj\\",
+      "projectPath": "C:\\Users\\uanca\\Desktop\\proiect dotNet\\LicenseDriver\\LicenseDRIVER\\03-Services\\Services.csproj",
+      "packagesPath": "C:\\Users\\uanca\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\uanca\\Desktop\\proiect dotNet\\LicenseDriver\\LicenseDRIVER\\03-Services\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\emmas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\uanca\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -12705,8 +12705,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\Users\\emmas\\Documents\\LicenseDriver\\LicenseDRIVER\\02-Business\\Business.csproj": {
-              "projectPath": "C:\\Users\\emmas\\Documents\\LicenseDriver\\LicenseDRIVER\\02-Business\\Business.csproj"
+            "C:\\Users\\uanca\\Desktop\\proiect dotNet\\LicenseDriver\\LicenseDRIVER\\02-Business\\Business.csproj": {
+              "projectPath": "C:\\Users\\uanca\\Desktop\\proiect dotNet\\LicenseDriver\\LicenseDRIVER\\02-Business\\Business.csproj"
             }
           }
         }
@@ -12720,27 +12720,27 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": {
+          "AutoMapper": {
             "target": "Package",
-            "version": "2.0.1"
-          },
-          "SimpleInjector": {
-            "target": "Package",
-            "version": "4.0.12"
+            "version": "[6.2.2, )"
           },
           "AutoMapper.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
-            "version": "3.2.0"
+            "version": "[3.2.0, )"
+          },
+          "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[2.0.1, )"
           },
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "2.0",
+            "version": "[2.0.0, )",
             "autoReferenced": true
           },
-          "AutoMapper": {
+          "SimpleInjector": {
             "target": "Package",
-            "version": "6.2.2"
+            "version": "[4.0.12, )"
           }
         },
         "imports": [

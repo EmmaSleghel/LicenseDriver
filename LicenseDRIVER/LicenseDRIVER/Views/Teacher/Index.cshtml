@@ -3,127 +3,124 @@
 @{
     ViewData["Title"] = "Index";
 }
+<br /><br />
+<div class="wrapper">
+    <div class="sidebar" data-image="~/images/sidebar-5.jpg">
 
-    <div class="wrapper">
-        <div class="sidebar" data-image="img/sidebar-5.jpg">
-       
-            <div class="sidebar-wrapper">
-                <div class="logo">
-                    <!-- <a href="http://www.creative-tim.com" class="simple-text">
-                        Creative Tim
-                    </a> -->
-                    <div class="w3-panel" style="width:100%">
-                        <button class="w3-button w3-block w3-round w3-padding-small w3-flat-turquoise"><span class="simple-text">Add task</span></button>
-                    </div>
-                </div>
-                <ul class="nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="dash.html">
-                            <i class="nc-icon nc-chart-pie-35"></i>
-                            <p>Dashboard</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="./user.html">
-                            <i class="nc-icon nc-circle-09"></i>
-                            <p>Invite..</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link" id="profile">
-                            <i class="nc-icon nc-circle-09"></i>
-                            <p>Profile</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="student_list.html">
-                            <i class="nc-icon nc-notes"></i>
-                            <p>Students list</p>
-                        </a>
-                    </li>
+        <div class="sidebar-wrapper">
+            <br /><br />
+            <div class="logo">
 
-                    <li>
-                        <a class="nav-link" href="notification.html">
-                            <i class="nc-icon nc-bell-55"></i>
-                            <p>Notifications</p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="main-panel">
-            <div class="content">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div>
-                            <form class="w3-container w3-card-2 w3-white" action="/action_page.php" style="width:30%;">
-                                <center><h2 class="w3-text-black">Task <i class="material-icons right2">&#xe3c9;</i><i style="font-size:30px" class="fa right1">&#xf00d;</i></h2></center>
-
-                                <p class="w3-white">
-                                    <label class="w3-text-black margin1"><b>Name the task:</b></label>
-                                    <input class="w3-input " name="first" type="text">
-                                </p>
-                                <p>
-                                    <label class="w3-text-black margin1"><b>Choose students</b></label>
-                                </p>
-
-                                <p>
-                                    <select class="w3-select" name="option">
-                                        <option value="" disabled selected>Choose your option</option>
-                                        <option value="1">Option 1</option>
-                                        <option value="2">Option 2</option>
-                                        <option value="3">Option 3</option>
-                                    </select>
-                                </p>
-                                <p>
-                                    <select class="w3-select" name="option">
-                                        <option value="" disabled selected>Choose your option</option>
-                                        <option value="1">Option 1</option>
-                                        <option value="2">Option 2</option>
-                                        <option value="3">Option 3</option>
-                                    </select>
-                                </p>
-                                <p>
-                                    <select class="w3-select" name="option">
-                                        <option value="" disabled selected>Choose your option</option>
-                                        <option value="1">Option 1</option>
-                                        <option value="2">Option 2</option>
-                                        <option value="3">Option 3</option>
-                                    </select>
-                                </p>
-
-                                <p>
-                                    <label class="w3-text-black margin1"><b>Set a date</b></label>
-                                    <input class="w3-input" name="last" type="date">
-                                </p>
-                                <p>
-                                    <center><button class="w3-btn w3-flat-turquoise ">Add</button></center>
-                                </p>
-                                @Html.HiddenFor(x=>x.TeacherId)
-                            </form>
-
-                        </div>
-
-
-                    </div>
+                <div class="w3-panel" style="width:100%">
+                    <button class="w3-button w3-block w3-round w3-padding-small w3-flat-turquoise"><span class="simple-text">Add task</span></button>
                 </div>
             </div>
+            <ul class="nav">
+                <li class="nav-item active">
+                    <a asp-controller="Teacher" asp-action="Index" class="nav-link">
+                        <i class="nc-icon nc-chart-pie-35"></i>
+                        <p>Dashboard</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link" href="./user.html">
+                        <i class="nc-icon nc-circle-09"></i>
+                        <p>Invite..</p>
+                    </a>
+                </li>
+                <li>
+                    <a asp-controller="Teacher" asp-action="Profile" class="nav-link">
+                        <i class="nc-icon nc-circle-09"></i>
+                        <p>Profile</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link" href="student_list.html">
+                        <i class="nc-icon nc-notes"></i>
+                        <p>Students list</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link" href="notification.html">
+                        <i class="nc-icon nc-bell-55"></i>
+                        <p>Notifications</p>
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
+   
+    <div class="main-panel">
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div>
+                        <form class="w3-container w3-card-2 w3-white" action="/action_page.php" style="width:30%;">
+                            <center><h2 class="w3-text-black">Task <i class="material-icons right2">&#xe3c9;</i><i class="material-icons right1">&#xE14C;</i></h2></center>
+                            <p class="w3-white">
+                                <label class="w3-text-black margin1"><b>Name the task:</b></label>
+                                <input class="w3-input " name="first" type="text">
+                            </p>
+                            <p>
+                                <label class="w3-text-black margin1"><b>Choose students</b></label>
+                            </p>
+                            <p>
+                                <select class="w3-select" name="option">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                </select>
+                            </p>
+                            <p>
+                                <select class="w3-select" name="option">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                </select>
+                            </p>
+                            <p>
+                                <select class="w3-select" name="option">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                </select>
+                            </p>
+                            <p>
+                                <label class="w3-text-black margin1"><b>Set a date</b></label>
+                                <input class="w3-input" name="last" type="date">
+                            </p>
+                            <p>
+                                <center><button class="w3-btn w3-flat-turquoise ">Add</button></center>
+                            </p>
+                            @Html.HiddenFor(x => x.TeacherId)
+                        </form>
+                    </div>
 
-@section Scripts{ 
-<script src="js/core/jquery.3.2.1.min.js" type="text/javascript"></script>
-<script src="js/core/popper.min.js" type="text/javascript"></script>
-<script src="js/core/bootstrap.min.js" type="text/javascript"></script>
-<!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
-<script src="js/plugins/bootstrap-switch.js"></script>
-<!--  Chartist Plugin  -->
-<script src="js/plugins/chartist.min.js"></script>
-<!--  Notifications Plugin    -->
-<script src="js/plugins/bootstrap-notify.js"></script>
-<!-- Control Center for Light Bootstrap Dashboard: scripts for the example pages etc -->
-<script src="js/light-bootstrap-dashboard.js?v=2.0.1" type="text/javascript"></script>
+                </div>
+            </div>
+        </div>
+        <br /><br /><br /><br />
+        <footer class="text-center">
+            <p>&copy; 2018 - LicenseDRIVER</p>
+        </footer>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="js/core/jquery.3.2.1.min.js" type="text/javascript"></script>
+    <script src="js/core/popper.min.js" type="text/javascript"></script>
+    <script src="js/core/bootstrap.min.js" type="text/javascript"></script>
+    <!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+    <script src="js/plugins/bootstrap-switch.js"></script>
+    <!--  Chartist Plugin  -->
+    <script src="js/plugins/chartist.min.js"></script>
+    <!--  Notifications Plugin    -->
+    <script src="js/plugins/bootstrap-notify.js"></script>
+    <!-- Control Center for Light Bootstrap Dashboard: scripts for the example pages etc -->
+    <script src="js/light-bootstrap-dashboard.js?v=2.0.1" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             var id = $('#TeacherId').val();
@@ -134,8 +131,6 @@
 
         });
 
-</script>
+    </script>
 
-
-
-    }
+}

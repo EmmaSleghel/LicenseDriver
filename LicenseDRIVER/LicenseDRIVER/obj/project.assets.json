@@ -13496,7 +13496,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\emmas\\.nuget\\packages\\": {},
+    "C:\\Users\\uanca\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -13505,17 +13505,17 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\emmas\\Documents\\LicenseDriver\\LicenseDRIVER\\LicenseDRIVER\\LicenseDRIVER.csproj",
+      "projectUniqueName": "C:\\Users\\uanca\\Desktop\\proiect dotNet\\LicenseDriver\\LicenseDRIVER\\LicenseDRIVER\\LicenseDRIVER.csproj",
       "projectName": "LicenseDRIVER",
-      "projectPath": "C:\\Users\\emmas\\Documents\\LicenseDriver\\LicenseDRIVER\\LicenseDRIVER\\LicenseDRIVER.csproj",
-      "packagesPath": "C:\\Users\\emmas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\emmas\\Documents\\LicenseDriver\\LicenseDRIVER\\LicenseDRIVER\\obj\\",
+      "projectPath": "C:\\Users\\uanca\\Desktop\\proiect dotNet\\LicenseDriver\\LicenseDRIVER\\LicenseDRIVER\\LicenseDRIVER.csproj",
+      "packagesPath": "C:\\Users\\uanca\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\uanca\\Desktop\\proiect dotNet\\LicenseDriver\\LicenseDRIVER\\LicenseDRIVER\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\emmas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\uanca\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -13528,11 +13528,11 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\Users\\emmas\\Documents\\LicenseDriver\\LicenseDRIVER\\03-Services\\Services.csproj": {
-              "projectPath": "C:\\Users\\emmas\\Documents\\LicenseDriver\\LicenseDRIVER\\03-Services\\Services.csproj"
+            "C:\\Users\\uanca\\Desktop\\proiect dotNet\\LicenseDriver\\LicenseDRIVER\\02-Business\\Business.csproj": {
+              "projectPath": "C:\\Users\\uanca\\Desktop\\proiect dotNet\\LicenseDriver\\LicenseDRIVER\\02-Business\\Business.csproj"
             },
-            "C:\\Users\\emmas\\Documents\\LicenseDriver\\LicenseDRIVER\\02-Business\\Business.csproj": {
-              "projectPath": "C:\\Users\\emmas\\Documents\\LicenseDriver\\LicenseDRIVER\\02-Business\\Business.csproj"
+            "C:\\Users\\uanca\\Desktop\\proiect dotNet\\LicenseDriver\\LicenseDRIVER\\03-Services\\Services.csproj": {
+              "projectPath": "C:\\Users\\uanca\\Desktop\\proiect dotNet\\LicenseDriver\\LicenseDRIVER\\03-Services\\Services.csproj"
             }
           }
         }
@@ -13546,42 +13546,42 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": {
+          "AutoMapper": {
             "target": "Package",
-            "version": "2.0.1"
+            "version": "[6.2.2, )"
           },
           "AutoMapper.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
-            "version": "3.2.0"
-          },
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
-            "target": "Package",
-            "version": "2.0.0"
-          },
-          "bootstrap.sass": {
-            "target": "Package",
-            "version": "4.0.0-beta2"
-          },
-          "Microsoft.NETCore.App": {
-            "target": "Package",
-            "version": "2.0",
-            "autoReferenced": true
-          },
-          "AutoMapper": {
-            "target": "Package",
-            "version": "6.2.2"
-          },
-          "Microsoft.AspNetCore.All": {
-            "target": "Package",
-            "version": "2.0.3"
+            "version": "[3.2.0, )"
           },
           "BuildWebCompiler": {
             "target": "Package",
-            "version": "1.11.326"
+            "version": "[1.11.326, )"
+          },
+          "Microsoft.AspNetCore.All": {
+            "target": "Package",
+            "version": "[2.0.3, )"
+          },
+          "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[2.0.1, )"
+          },
+          "Microsoft.NETCore.App": {
+            "target": "Package",
+            "version": "[2.0.0, )",
+            "autoReferenced": true
+          },
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+            "target": "Package",
+            "version": "[2.0.0, )"
           },
           "bootstrap": {
             "target": "Package",
-            "version": "4.0.0-beta2"
+            "version": "[4.0.0-beta2, )"
+          },
+          "bootstrap.sass": {
+            "target": "Package",
+            "version": "[4.0.0-beta2, )"
           }
         },
         "imports": [
