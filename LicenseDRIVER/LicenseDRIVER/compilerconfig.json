@@ -2,5 +2,17 @@
   {
     "outputFile": "wwwroot/sass/login.css",
     "inputFile": "wwwroot/sass/login.scss"
+  },
+  {
+    "outputFile": "wwwroot/sass/IndexProfesor.css",
+    "inputFile": "wwwroot/sass/IndexProfesor.scss"
+  },
+  {
+    "outputFile": "wwwroot/sass/Layout.css",
+    "inputFile": "wwwroot/sass/Layout.scss"
+  },
+  {
+    "outputFile": "wwwroot/sass/MainSASS.css",
+    "inputFile": "wwwroot/sass/MainSASS.scss"
   }
 ]
