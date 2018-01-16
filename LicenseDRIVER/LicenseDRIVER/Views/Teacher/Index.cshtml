@@ -4,6 +4,12 @@
     ViewData["Title"] = "Index";
 }
 <br /><br />
+<style>
+    .editText1 {
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size:30px;
+    }
+</style>
 <div class="wrapper">
     <div class="sidebar" data-image="~/images/sidebar-5.jpg">
 
@@ -12,7 +18,7 @@
             <div class="logo">
 
                 <div class="w3-panel" style="width:100%">
-                    <button class="w3-button w3-block w3-round w3-padding-small w3-flat-turquoise"><span class="simple-text">Add task</span></button>
+                    <button  onclick="newTask()" class="w3-button w3-block w3-round w3-padding-small w3-flat-turquoise"><span class="simple-text">Add task</span></button>
                 </div>
             </div>
             <ul class="nav">
@@ -54,8 +60,10 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
-                    <div>
-                        <form class="w3-container w3-card-2 w3-white" action="/action_page.php" style="width:30%;">
+
+                    <div id="base" class="hidden">
+                        <div class="col-md-4">
+                        <form class="w3-container w3-card-2 w3-white" >
                             <center><h2 class="w3-text-black">Task <i class="material-icons right2">&#xe3c9;</i><i class="material-icons right1">&#xE14C;</i></h2></center>
                             <p class="w3-white">
                                 <label class="w3-text-black margin1"><b>Name the task:</b></label>
@@ -97,6 +105,22 @@
                             </p>
                             @Html.HiddenFor(x => x.TeacherId)
                         </form>
+                        <br /><br />
+                        </div>
+                    </div>
+
+
+                    <div id="insertTask">
+                        <div class="container-fluid">
+                            <br />
+                            <p class="editText1">
+                                You don't have any task . Please click on ADD TASK to create a task or more.
+                            </p>
+                            <img src="~/images/gif1.gif" alt="gif" width="700" height="300">
+                        </div>
+                        <div>
+
+                        </div>
                     </div>
 
                 </div>
@@ -132,5 +156,13 @@
         });
 
     </script>
-
+    <script>
+        function newTask() {
+            var x = document.getElementById("base").children[0];
+            var cln = x.cloneNode(true);
+            var y = document.getElementById("insertTask").children[0].setAttribute("class", "hidden");
+            var x = document.getElementById("insertTask").appendChild(cln);
+        
+        }
+    </script>
 }

@@ -12609,11 +12609,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\uanca\\Desktop\\proiect dotNet\\LicenseDriver\\LicenseDRIVER\\01-Data\\Data.csproj",
+      "projectUniqueName": "C:\\Users\\uanca\\Desktop\\dotNet Ver1\\LicenseDriver\\LicenseDRIVER\\01-Data\\Data.csproj",
       "projectName": "Data",
-      "projectPath": "C:\\Users\\uanca\\Desktop\\proiect dotNet\\LicenseDriver\\LicenseDRIVER\\01-Data\\Data.csproj",
+      "projectPath": "C:\\Users\\uanca\\Desktop\\dotNet Ver1\\LicenseDriver\\LicenseDRIVER\\01-Data\\Data.csproj",
       "packagesPath": "C:\\Users\\uanca\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\uanca\\Desktop\\proiect dotNet\\LicenseDriver\\LicenseDRIVER\\01-Data\\obj\\",
+      "outputPath": "C:\\Users\\uanca\\Desktop\\dotNet Ver1\\LicenseDriver\\LicenseDRIVER\\01-Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
