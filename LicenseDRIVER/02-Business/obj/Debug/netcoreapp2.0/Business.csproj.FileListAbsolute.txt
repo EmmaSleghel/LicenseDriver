@@ -68,3 +68,14 @@ C:\Users\uanca\Desktop\dotNet Ver1\LicenseDriver\LicenseDRIVER\02-Business\obj\D
 C:\Users\uanca\Desktop\dotNet Ver1\LicenseDriver\LicenseDRIVER\02-Business\obj\Debug\netcoreapp2.0\Business.AssemblyInfo.cs
 C:\Users\uanca\Desktop\dotNet Ver1\LicenseDriver\LicenseDRIVER\02-Business\obj\Debug\netcoreapp2.0\Business.dll
 C:\Users\uanca\Desktop\dotNet Ver1\LicenseDriver\LicenseDRIVER\02-Business\obj\Debug\netcoreapp2.0\Business.pdb
+C:\Users\Emma\Desktop\LicenseDriver\LicenseDRIVER\02-Business\bin\Debug\netcoreapp2.0\Business.deps.json
+C:\Users\Emma\Desktop\LicenseDriver\LicenseDRIVER\02-Business\bin\Debug\netcoreapp2.0\Business.dll
+C:\Users\Emma\Desktop\LicenseDriver\LicenseDRIVER\02-Business\bin\Debug\netcoreapp2.0\Business.pdb
+C:\Users\Emma\Desktop\LicenseDriver\LicenseDRIVER\02-Business\bin\Debug\netcoreapp2.0\Data.dll
+C:\Users\Emma\Desktop\LicenseDriver\LicenseDRIVER\02-Business\bin\Debug\netcoreapp2.0\Data.pdb
+C:\Users\Emma\Desktop\LicenseDriver\LicenseDRIVER\02-Business\obj\Debug\netcoreapp2.0\Business.csprojResolveAssemblyReference.cache
+C:\Users\Emma\Desktop\LicenseDriver\LicenseDRIVER\02-Business\obj\Debug\netcoreapp2.0\Business.csproj.CoreCompileInputs.cache
+C:\Users\Emma\Desktop\LicenseDriver\LicenseDRIVER\02-Business\obj\Debug\netcoreapp2.0\Business.AssemblyInfoInputs.cache
+C:\Users\Emma\Desktop\LicenseDriver\LicenseDRIVER\02-Business\obj\Debug\netcoreapp2.0\Business.AssemblyInfo.cs
+C:\Users\Emma\Desktop\LicenseDriver\LicenseDRIVER\02-Business\obj\Debug\netcoreapp2.0\Business.dll
+C:\Users\Emma\Desktop\LicenseDriver\LicenseDRIVER\02-Business\obj\Debug\netcoreapp2.0\Business.pdb

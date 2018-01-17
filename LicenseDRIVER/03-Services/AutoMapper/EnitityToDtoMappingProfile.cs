@@ -13,7 +13,11 @@ namespace Services.AutoMapper
             CreateMap<Data.Entities.Student, StudentDto>();
             CreateMap<StudentDto, Data.Entities.Student>();
             CreateMap<Data.Entities.Teacher, TeacherDto>();
-            CreateMap<TeacherDto, Data.Entities.Teacher>();
+            CreateMap<TeacherDto, Data.Entities.Teacher > ();
+            CreateMap<Data.Entities.Notification, NotificationDto>();
+            CreateMap<NotificationDto, Data.Entities.Notification>();
+
+
         }
     }
 }

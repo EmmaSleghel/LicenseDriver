@@ -46,14 +46,15 @@ namespace LicenseDRIVER.Controllers
                 if (model.Type==TypeOfUser.Teacher)
                 {
                     RegisterNewTeacher(model);
+                    HttpContext.Session.SetString("User", model.Username);
                     return RedirectToAction("Index", "Teacher", new { id = model.Id });
 
                 }
                 else
                 {
                     RegisterNewStudent(model);
+                    HttpContext.Session.SetString("User", model.Username);
                     return RedirectToAction("Index", "Student", new { id = model.Id });
-
                 }
 
             }
@@ -108,7 +109,7 @@ namespace LicenseDRIVER.Controllers
         public ActionResult Logout()
         {
             HttpContext.Session.Clear();
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Login");
         }
         private void RegisterNewTeacher(RegisterViewModel model)
         {

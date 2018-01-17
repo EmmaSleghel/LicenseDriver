@@ -22,12 +22,7 @@
                               <p>Dashboard</p>
                           </a>
                       </li>
-                      <li>
-                          <a class="nav-link" href="./user.html">
-                              <i class="nc-icon nc-circle-09"></i>
-                              <p>Invite..</p>
-                          </a>
-                      </li>
+                      
                       <li class="nav-item active">
                           <a asp-controller="Teacher" asp-action="Profile" class="nav-link">
                               <i class="nc-icon nc-circle-09"></i>
@@ -35,17 +30,18 @@
                           </a>
                       </li>
                       <li>
-                          <a class="nav-link" href="student_list.html">
+                          <a asp-controller="Teacher" asp-action="StudentList" class="nav-link">
+
                               <i class="nc-icon nc-notes"></i>
                               <p>Students list</p>
                           </a>
                       </li>
                       <li>
-                          <a class="nav-link" href="notification.html">
-                              <i class="nc-icon nc-bell-55"></i>
-                              <p>Notifications</p>
-                          </a>
-                      </li>
+                          <a asp-controller="Teacher" asp-action="Notifications" class="nav-link">
+                                  <i class="nc-icon nc-bell-55"></i>
+                                  <p>Notifications</p>
+                              </a>
+</li>
                   </ul>
               </div>
           </div>
@@ -166,3 +162,16 @@
 <script src="js/plugins/bootstrap-notify.js"></script>
 <!-- Control Center for Light Bootstrap Dashboard: scripts for the example pages etc -->
 <script src="js/light-bootstrap-dashboard.js?v=2.0.1" type="text/javascript"></script>
+<script>
+    $(document).ready(function () {
+        $('#login').css('display', 'none');
+        $('#logout').css('display', 'block');
+    });
+    function newTask() {
+        var x = document.getElementById("base").children[0];
+        var cln = x.cloneNode(true);
+        var y = document.getElementById("insertTask").children[0].setAttribute("class", "hidden");
+        var x = document.getElementById("insertTask").appendChild(cln);
+
+    }
+</script>

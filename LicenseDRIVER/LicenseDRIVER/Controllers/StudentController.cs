@@ -20,10 +20,14 @@ namespace LicenseDRIVER.Controllers
         }
         public IActionResult Index(Guid id)
         {
+            if (!HttpContext.Session.Keys.Contains("User"))
+            {
+                return RedirectToAction("Unauthorized");
+            }
             var student = _studentService.GetStudentById(id);
             var studentviewmodel = Mapper.Map<StudentViewModel>(student);
 
-            return View(student);
+            return View(studentviewmodel);
         }
     }
 }

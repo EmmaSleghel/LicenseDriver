@@ -28,12 +28,7 @@
                         <p>Dashboard</p>
                     </a>
                 </li>
-                <li>
-                    <a class="nav-link" href="./user.html">
-                        <i class="nc-icon nc-circle-09"></i>
-                        <p>Invite..</p>
-                    </a>
-                </li>
+               
                 <li>
                     <a asp-controller="Teacher" asp-action="Profile" class="nav-link">
                         <i class="nc-icon nc-circle-09"></i>
@@ -41,13 +36,13 @@
                     </a>
                 </li>
                 <li>
-                    <a class="nav-link" href="student_list.html">
+                    <a asp-controller="Teacher" asp-action="StudentList" class="nav-link">
                         <i class="nc-icon nc-notes"></i>
                         <p>Students list</p>
                     </a>
                 </li>
                 <li>
-                    <a class="nav-link" href="notification.html">
+                    <a asp-controller="Teacher" asp-action="Notifications" class="nav-link">
                         <i class="nc-icon nc-bell-55"></i>
                         <p>Notifications</p>
                     </a>
@@ -75,25 +70,25 @@
                             <p>
                                 <select class="w3-select" name="option">
                                     <option value="" disabled selected>Choose your option</option>
-                                    <option value="1">Option 1</option>
-                                    <option value="2">Option 2</option>
-                                    <option value="3">Option 3</option>
+                                    <option value="1">Ileana ILI</option>
+                                    <option value="2">Ionel Ion</option>
+                                    <option value="3">Gigi Bec</option>
                                 </select>
                             </p>
                             <p>
                                 <select class="w3-select" name="option">
                                     <option value="" disabled selected>Choose your option</option>
-                                    <option value="1">Option 1</option>
-                                    <option value="2">Option 2</option>
-                                    <option value="3">Option 3</option>
+                                    <option value="1">Ileana ILI</option>
+                                    <option value="2">Ionel Ion</option>
+                                    <option value="3">Gigi Bec</option>
                                 </select>
                             </p>
                             <p>
                                 <select class="w3-select" name="option">
                                     <option value="" disabled selected>Choose your option</option>
-                                    <option value="1">Option 1</option>
-                                    <option value="2">Option 2</option>
-                                    <option value="3">Option 3</option>
+                                    <option value="1">Ileana ILI</option>
+                                    <option value="2">Ionel Ion</option>
+                                    <option value="3">Gigi Bec</option>
                                 </select>
                             </p>
                             <p>
@@ -157,6 +152,10 @@
 
     </script>
     <script>
+        $(document).ready(function () {
+            $('#login').css('display' , 'none');
+            $('#logout').css('display','block');
+        });
         function newTask() {
             var x = document.getElementById("base").children[0];
             var cln = x.cloneNode(true);

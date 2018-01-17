@@ -12,6 +12,7 @@ using LicenseDRIVER.Models;
 using Microsoft.AspNetCore.Identity;
 using AutoMapper;
 using Data.Entities;
+using Services.Notification;
 
 namespace LicenseDRIVER
 {
@@ -30,13 +31,15 @@ namespace LicenseDRIVER
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddTransient<IStudentService, StudentService>();
             services.AddTransient<ITeacherService, TeacherService>();
+            services.AddTransient<INotificationService, NotificationService>();
+
 
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
-            services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),x=>x.MigrationsAssembly("LicenseDRIVER")));
+            services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"), x => x.MigrationsAssembly("Data")));
             services.AddMvc().AddSessionStateTempDataProvider();
             services.AddSession();
             services.AddAutoMapper();
-           
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -59,6 +62,11 @@ namespace LicenseDRIVER
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
+                routes.MapRoute(
+                    name :"404-PageNotFound",
+                    template:"{*url}",
+                    defaults: new { controller = "PageNotFound", action = "Index" }
+    );
             });
             app.UseAuthentication();
         }

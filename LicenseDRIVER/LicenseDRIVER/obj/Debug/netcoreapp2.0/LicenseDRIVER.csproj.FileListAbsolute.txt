@@ -94,3 +94,20 @@ C:\Users\uanca\Desktop\dotNet Ver1\LicenseDriver\LicenseDRIVER\LicenseDRIVER\obj
 C:\Users\uanca\Desktop\dotNet Ver1\LicenseDriver\LicenseDRIVER\LicenseDRIVER\obj\Debug\netcoreapp2.0\LicenseDRIVER.AssemblyInfo.cs
 C:\Users\uanca\Desktop\dotNet Ver1\LicenseDriver\LicenseDRIVER\LicenseDRIVER\obj\Debug\netcoreapp2.0\LicenseDRIVER.dll
 C:\Users\uanca\Desktop\dotNet Ver1\LicenseDriver\LicenseDRIVER\LicenseDRIVER\obj\Debug\netcoreapp2.0\LicenseDRIVER.pdb
+C:\Users\Emma\Desktop\LicenseDriver\LicenseDRIVER\LicenseDRIVER\bin\Debug\netcoreapp2.0\LicenseDRIVER.deps.json
+C:\Users\Emma\Desktop\LicenseDriver\LicenseDRIVER\LicenseDRIVER\bin\Debug\netcoreapp2.0\LicenseDRIVER.runtimeconfig.json
+C:\Users\Emma\Desktop\LicenseDriver\LicenseDRIVER\LicenseDRIVER\bin\Debug\netcoreapp2.0\LicenseDRIVER.runtimeconfig.dev.json
+C:\Users\Emma\Desktop\LicenseDriver\LicenseDRIVER\LicenseDRIVER\bin\Debug\netcoreapp2.0\LicenseDRIVER.dll
+C:\Users\Emma\Desktop\LicenseDriver\LicenseDRIVER\LicenseDRIVER\bin\Debug\netcoreapp2.0\LicenseDRIVER.pdb
+C:\Users\Emma\Desktop\LicenseDriver\LicenseDRIVER\LicenseDRIVER\bin\Debug\netcoreapp2.0\Business.dll
+C:\Users\Emma\Desktop\LicenseDriver\LicenseDRIVER\LicenseDRIVER\bin\Debug\netcoreapp2.0\Data.dll
+C:\Users\Emma\Desktop\LicenseDriver\LicenseDRIVER\LicenseDRIVER\bin\Debug\netcoreapp2.0\Services.dll
+C:\Users\Emma\Desktop\LicenseDriver\LicenseDRIVER\LicenseDRIVER\bin\Debug\netcoreapp2.0\Business.pdb
+C:\Users\Emma\Desktop\LicenseDriver\LicenseDRIVER\LicenseDRIVER\bin\Debug\netcoreapp2.0\Services.pdb
+C:\Users\Emma\Desktop\LicenseDriver\LicenseDRIVER\LicenseDRIVER\bin\Debug\netcoreapp2.0\Data.pdb
+C:\Users\Emma\Desktop\LicenseDriver\LicenseDRIVER\LicenseDRIVER\obj\Debug\netcoreapp2.0\LicenseDRIVER.csprojResolveAssemblyReference.cache
+C:\Users\Emma\Desktop\LicenseDriver\LicenseDRIVER\LicenseDRIVER\obj\Debug\netcoreapp2.0\LicenseDRIVER.csproj.CoreCompileInputs.cache
+C:\Users\Emma\Desktop\LicenseDriver\LicenseDRIVER\LicenseDRIVER\obj\Debug\netcoreapp2.0\LicenseDRIVER.AssemblyInfoInputs.cache
+C:\Users\Emma\Desktop\LicenseDriver\LicenseDRIVER\LicenseDRIVER\obj\Debug\netcoreapp2.0\LicenseDRIVER.AssemblyInfo.cs
+C:\Users\Emma\Desktop\LicenseDriver\LicenseDRIVER\LicenseDRIVER\obj\Debug\netcoreapp2.0\LicenseDRIVER.dll
+C:\Users\Emma\Desktop\LicenseDriver\LicenseDRIVER\LicenseDRIVER\obj\Debug\netcoreapp2.0\LicenseDRIVER.pdb

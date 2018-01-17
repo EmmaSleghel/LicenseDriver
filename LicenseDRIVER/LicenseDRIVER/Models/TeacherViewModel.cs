@@ -8,5 +8,6 @@ namespace LicenseDRIVER.Models
     public class TeacherViewModel:UserViewModel
     {
         public Guid TeacherId { get; set; }
+        public string Class { get; set; }
     }
 }

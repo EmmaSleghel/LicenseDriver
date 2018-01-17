@@ -1,0 +1,182 @@
+﻿@model IEnumerable<LicenseDRIVER.Models.StudentViewModel>
+
+@{
+    ViewData["Title"] = "StudentList";
+}
+
+
+<div class="wrapper">
+    <div class="sidebar" style=" background-image: url('../wwwroot/images/sidebar-5.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;" >
+
+        <div class="sidebar-wrapper">
+            <br /><br />
+            <div class="logo">
+
+                <div class="w3-panel" style="width:100%">
+                    <button class="w3-button w3-block w3-round w3-padding-small w3-flat-turquoise"><span class="simple-text">Add task</span></button>
+                </div>
+            </div>
+            <ul class="nav">
+                <li>
+                    <a asp-controller="Teacher" asp-action="Index" class="nav-link">
+                        <i class="nc-icon nc-chart-pie-35"></i>
+                        <p>Dashboard</p>
+                    </a>
+                </li>
+                
+                <li >
+                    <a asp-controller="Teacher" asp-action="Profile" class="nav-link">
+                        <i class="nc-icon nc-circle-09"></i>
+                        <p>Profile</p>
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">
+                        <i class="nc-icon nc-notes"></i>
+                        <p>Students list</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link" href="notification.html">
+                        <i class="nc-icon nc-bell-55"></i>
+                        <p>Notifications</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="main-panel">
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-1">
+                    </div>
+                    <div class="col-md-10">
+                        <div class="w3-container">
+                            <div class=" w3-card-2 w3-white">
+                                <header class="w3-container w3-teal">
+                                    <h1>My students</h1>
+                                </header>
+                                <div class="w3-container">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.Class)
+                                                </th>
+
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.Username)
+                                                </th>
+
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.Email)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.FirstName)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.LastName)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.City)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.Country)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.University)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.Specifications)
+                                                </th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var item in Model)
+                                            {
+                                                <tr>
+
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Class)
+                                                    </td>
+
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Username)
+                                                    </td>
+
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Email)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.FirstName)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.LastName)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.City)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Country)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.University)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Specifications)
+                                                    </td>
+                                                    <td>
+                                                        @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                                                        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                                                        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                                                    </td>
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="text-center">
+            <p>&copy; 2018 - LicenseDRIVER</p>
+        </footer>
+    </div>
+</div>
+
+
+<script src="js/core/jquery.3.2.1.min.js" type="text/javascript"></script>
+<script src="js/core/popper.min.js" type="text/javascript"></script>
+<script src="js/core/bootstrap.min.js" type="text/javascript"></script>
+<!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+<script src="js/plugins/bootstrap-switch.js"></script>
+<!--  Chartist Plugin  -->
+<script src="js/plugins/chartist.min.js"></script>
+<!--  Notifications Plugin    -->
+<script src="js/plugins/bootstrap-notify.js"></script>
+<!-- Control Center for Light Bootstrap Dashboard: scripts for the example pages etc -->
+<script src="js/light-bootstrap-dashboard.js?v=2.0.1" type="text/javascript"></script>
+<script>
+    $(document).ready(function () {
+        $('#login').css('display', 'none');
+        $('#logout').css('display', 'block');
+    });
+    function newTask() {
+        var x = document.getElementById("base").children[0];
+        var cln = x.cloneNode(true);
+        var y = document.getElementById("insertTask").children[0].setAttribute("class", "hidden");
+        var x = document.getElementById("insertTask").appendChild(cln);
+
+    }
+</script>
+

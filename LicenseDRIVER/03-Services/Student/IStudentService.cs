@@ -9,7 +9,7 @@ namespace Services.Student
     {
         StudentDto GetStudentById(Guid id);
         StudentDto GetStudentByUsername(string username);
-
+        List<StudentDto>GetStudentsByTeacherId(Guid id);
         void CreateStudent(StudentDto student);
     }
 }

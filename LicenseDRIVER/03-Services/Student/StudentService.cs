@@ -4,6 +4,7 @@ using AutoMapper;
 using Services.Dtos;
 using Business.Infrastructure;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace Services.Student
 {
@@ -36,6 +37,11 @@ namespace Services.Student
         {
             var studentEntity = studentRepository.Query().FirstOrDefault(x => x.Username == username);
             return mapper.Map<StudentDto>(studentEntity);
+        }
+        public List<StudentDto> GetStudentsByTeacherId(Guid id)
+        {
+            var studentlist = studentRepository.Query().ToList();
+            return Mapper.Map<List<StudentDto>>(studentlist);
         }
     }
 }

@@ -95,7 +95,8 @@
                 </form>
                         }
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a asp-controller="Account" asp-action="Login"><span class="glyphicon glyphicon-log-in"></span>LOGIN</a></li>
+                        <li id="login"><a asp-controller="Account" asp-action="Login"><span class="glyphicon glyphicon-log-in"></span>LOGIN</a></li>
+                        <li id="logout" style="display:none"><a asp-controller="Account" asp-action="Login"><span class="glyphicon glyphicon-log-out"></span>LOGOUT</a></li>
                         <li><a asp-controller="Account" asp-action="Register"><span class="glyphicon glyphicon-user"></span>SIGN UP</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">

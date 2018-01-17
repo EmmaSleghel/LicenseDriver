@@ -13,6 +13,11 @@ namespace LicenseDRIVER.AutoMapper
             CreateMap<StudentViewModel, StudentDto>();
             CreateMap<TeacherDto, TeacherViewModel>();
             CreateMap<TeacherViewModel, TeacherDto>();
+            CreateMap<TeacherViewModel, TeacherDto>();
+            CreateMap<NotificationViewModel, NotificationDto>();
+            CreateMap<NotificationDto, NotificationViewModel>();
+
+
 
         }
     }
